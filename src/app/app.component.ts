@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+	links: Array <Object> = [
+		{ url: '/index', link: 'Index' },
+		{ url: '/finance', link: 'Finance' },
+		{ url: '/preview', link: 'Preview' }
+	]
 }

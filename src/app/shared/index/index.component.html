@@ -1,0 +1,10 @@
+<div class="page-wrapper">
+    <mat-card>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Time">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button mat-button>Search</button>
+    </mat-card>
+</div>
