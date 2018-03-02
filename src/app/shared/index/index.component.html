@@ -73,7 +73,10 @@
         </div>
         <div class="col-md-9">
             <mat-card class="mb30">
-                <h1 *ngFor="let user of userObservable">{{user.title}}</h1>
+                <!-- <mat-card-header class="mb15">
+                    <mat-card-title>前十个国家消耗图表</mat-card-title>
+                </mat-card-header> -->
+                <h3 *ngFor="let user of userObservable">{{user.title}}</h3>
             </mat-card>
         </div>
         <div class="col-md-3">
