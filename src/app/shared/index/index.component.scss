@@ -6,3 +6,52 @@ $colorWhite: #fff;
 .panel-static {
     background-color: $colorWhite;
 }
+
+.info {
+    color: $colorWhite;
+}
+
+.info-icon {
+    line-height: 1.5em;
+}
+
+.bg-primary {
+    background-image: linear-gradient(to right, #2d9193 30%, #4DCBCD 100%)
+}
+
+.bg-warn {
+    background-image: linear-gradient(to right, #FF976A 30%, #FFC2A4 100%)
+}
+
+.bg-success {
+    background-image: linear-gradient(to right, #10C888 30%, #5CE0B8 100%)
+}
+
+.bg-danger {
+    background-image: linear-gradient(to right, #FF6275 30%, #FF9EAC 100%)
+}
+
+.card-headline {
+    background-color: #f5f5f5;
+    border: 1px solid #eaeaea;
+}
+
+.card-title {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.list-unstyled {
+    padding: 0 13px;
+}
+
+.right-box {
+    padding: 8px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.right-box small {
+    font-size: 10px;
+}

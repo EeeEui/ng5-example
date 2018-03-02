@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 body {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'Open Sans', 'Microsoft  Yahei UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     font-size: 16px;
+    color: #494949;
+    font-weight: 400;
 }
 
 
@@ -50,6 +53,10 @@ body {
 
 .material-icons.md-48 {
     font-size: 48px;
+}
+
+.material-icons.md-3 {
+    font-size: 3rem;
 }
 
 
@@ -104,4 +111,50 @@ body {
 
 .ml15 {
     margin-left: 15px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb0 {
+    margin-bottom: 0px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+h5 {
+    font-size: 1.14rem;
+}
+
+.no-border-radius {
+    border-radius: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumb {
+    padding: 0.75rem 0;
+    background: none;
 }

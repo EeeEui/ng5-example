@@ -20,7 +20,7 @@ $bgColor: #f2f2f2;
 
 .header-bar {
     border-bottom: 1px solid #dfdfdf;
-    background: linear-gradient(to right, #2d9193, #3ec5c7, #42ebee);
+    background: linear-gradient(to right, #2d9193, #4bd5d8);
 }
 
 .icon {
@@ -42,8 +42,9 @@ ul {
 }
 
 ul li a {
+    line-height: 100%;
     display: block;
-    padding: 15px 15px 15px 30px;
+    padding: 14px;
     text-decoration: none;
     color: #565656;
 }
@@ -61,7 +62,7 @@ ul li a:hover {
 }
 
 .sub-nav li a {
-    padding: 15px 50px;
+    padding: 14px 14px 14px 50px;
 }
 
 .transform90 {
