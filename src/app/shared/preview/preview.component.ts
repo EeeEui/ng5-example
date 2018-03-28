@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./preview.component.scss']
 })
 export class PreviewComponent {
-  userObservable : Array<object> = [
+  userObservable : {title: string}[] = [
     {'title':'Preview page'},
     {'title':'Preview page'},
     {'title':'Preview page'},

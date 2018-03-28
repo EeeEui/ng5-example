@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <section class="row">
                 <div class="col-md-12">
-                    <mat-card class="mb30">
+                    <mat-card class="mb30 pd20">
                         <mat-form-field>
                             <input matInput [matDatepicker]="picker" placeholder="Time">
                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -18,7 +18,7 @@
                     </mat-card>
                 </div>
                 <div class="col-md-3">
-                    <mat-card class="mb30 bg-primary">
+                    <mat-card class="mb30 bg-primary pd20">
                         <section class="row">
                             <div class="col-md-4">
                                 <mat-icon class="md-3 md-light">check_circle</mat-icon>
@@ -31,7 +31,7 @@
                     </mat-card>
                 </div>
                 <div class="col-md-3">
-                    <mat-card class="mb30 bg-danger">
+                    <mat-card class="mb30 bg-danger pd20">
                         <section class="row">
                             <div class="col-md-4">
                                 <mat-icon class="md-3 md-light">highlight_off</mat-icon>
@@ -44,7 +44,7 @@
                     </mat-card>
                 </div>
                 <div class="col-md-3">
-                    <mat-card class="mb30 bg-warn">
+                    <mat-card class="mb30 bg-warn pd20">
                         <section class="row">
                             <div class="col-md-4">
                                 <mat-icon class="md-3 md-light">error</mat-icon>
@@ -57,7 +57,7 @@
                     </mat-card>
                 </div>
                 <div class="col-md-3">
-                    <mat-card class="mb30 bg-success">
+                    <mat-card class="mb30 bg-success pd20">
                         <section class="row">
                             <div class="col-md-4">
                                 <mat-icon class="md-3 md-light">payment</mat-icon>
@@ -72,16 +72,13 @@
             </section>
         </div>
         <div class="col-md-9">
-            <mat-card class="mb30">
-                <!-- <mat-card-header class="mb15">
-                    <mat-card-title>前十个国家消耗图表</mat-card-title>
-                </mat-card-header> -->
-                <h3 *ngFor="let user of userObservable">{{user.title}}</h3>
+            <mat-card class="mb30 pd20">
+                <div echarts [options]="options" class="demo-chart"></div>
             </mat-card>
         </div>
         <div class="col-md-3">
             <section col-sm-12>
-                <mat-card class="mb30">
+                <mat-card class="mb30 pd20">
                     <mat-card-header class="card-headline mb15">
                         <mat-card-title class="card-title">API 账户</mat-card-title>
                     </mat-card-header>
@@ -107,7 +104,7 @@
                 </mat-card>
             </section>
             <section col-sm-12>
-                <mat-card class="mb30">
+                <mat-card class="mb30 pd20">
                     <mat-card-header class="card-headline mb15">
                         <mat-card-title class="card-title">快捷功能</mat-card-title>
                     </mat-card-header>

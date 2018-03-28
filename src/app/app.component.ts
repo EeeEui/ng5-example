@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+	active: boolean = false;
 	links: Array <Object> = [
 		{ url: '/index', link: 'Index' },
 		{ url: '/finance', link: 'Finance' },

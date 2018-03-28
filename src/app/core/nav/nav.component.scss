@@ -1,0 +1,60 @@
+$bgColor: #f2f2f2;
+$white: #fff;
+ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li a {
+    line-height: 100%;
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    color: #565656;
+}
+
+ul li a:hover {
+    background-color: $bgColor;
+}
+
+.bgActive {
+    background-color: #f7f7f7;
+}
+
+.sub-nav {
+    border-bottom: 1px solid $bgColor;
+}
+
+.sub-nav li a {
+    padding: 14px 14px 14px 50px;
+}
+
+.open {
+    -ms-transform: rotate(90deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(90deg);
+    /* Firefox */
+    -webkit-transform: rotate(90deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(90deg);
+    /* Opera */
+    transform: rotate(90deg);
+}
+
+.closed {
+    -ms-transform: rotate(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(0deg);
+    /* Opera */
+    transform: rotate(0deg);
+}
+
+.nav-style {
+    width: 230px;
+}

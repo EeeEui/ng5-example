@@ -4,17 +4,23 @@ import { IndexComponent } from './index/index.component';
 import { FinanceComponent } from './finance/finance.component';
 import { PreviewComponent } from './preview/preview.component';
 import { MaterialModule } from '../material.module';
+import { NgxEchartsModule } from 'ngx-echarts';
+
 
 @NgModule({
     imports: [
         CommonModule,
-        MaterialModule
+        MaterialModule,
+        NgxEchartsModule
+
     ],
     exports: [
         IndexComponent,
         FinanceComponent,
         PreviewComponent,
-        MaterialModule
+        MaterialModule,
+        NgxEchartsModule
+
     ],
     declarations: [
         IndexComponent,

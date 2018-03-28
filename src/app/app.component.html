@@ -1,50 +1,29 @@
-<header>
-    <mat-toolbar>
-        <mat-toolbar-row class="header-bar">
-            <a href="javascript:void(0);" class="title">PaaSoo</a>
-            <button mat-icon-button class="white" (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-      </button>
-            <span class="spacer"></span>
-            <button mat-icon-button class="white">
-          <mat-icon>favorite</mat-icon>
-      </button>
-            <button mat-icon-button class="white">
-          <mat-icon>favorite</mat-icon>
-      </button>
-        </mat-toolbar-row>
+<ng-container>
+    <mat-toolbar class="page-header">
+        <a href="javascript:void(0);" class="title">PaaSoo</a>
+        <button mat-icon-button class="white" (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        <span class="spacer"></span>
+        <button mat-icon-button class="white">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        <button mat-icon-button class="white">
+                <mat-icon>favorite</mat-icon>
+            </button>
     </mat-toolbar>
-</header>
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" opened="true" class="page-sidenav">
-        <nav class="nav-container">
-            <ul class="nav-style">
-                <li>
-                    <a href="javascript:void(0);" (click)="show = !show" [ngClass]="{bgActive:show}">
-                        <i class="material-icons md-18 left mr15">&#xE88A;</i>
-                        <span>Index</span>
-                        <i class="material-icons md-18 right" [ngClass]="{transform90:show}">&#xe409;</i>
-                    </a>
-                    <ul class="sub-nav" *ngIf="show">
-                        <li>
-                            <a routerLink="/index">Index</a>
-                        </li>
-                        <li>
-                            <a routerLink="/finance">Finance</a>
-                        </li>
-                        <li>
-                            <a routerLink="/preview">Preview</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a routerLink="/finance">Finance</a>
-                </li>
-            </ul>
-        </nav>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
-<!-- <app-footer></app-footer> -->
+
+    <mat-sidenav-container class="page-container">
+        <mat-sidenav #sidenav mode="side" opened="true" class="page-sidenav">
+            <app-nav></app-nav>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <mat-toolbar class="page-footer">
+        <small class="text-center">Paasoo technology limited.</small>
+    </mat-toolbar>
+</ng-container>
