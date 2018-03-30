@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../material.module';
+import { NgxEchartsModule } from 'ngx-echarts';
 import { IndexComponent } from './index/index.component';
 import { FinanceComponent } from './finance/finance.component';
 import { PreviewComponent } from './preview/preview.component';
-import { MaterialModule } from '../material.module';
-import { NgxEchartsModule } from 'ngx-echarts';
-
+import { OverviewComponent } from './cost/overview/overview.component';
+import { DailyComponent } from './cost/daily/daily.component';
+import { MonthlyComponent } from './cost/monthly/monthly.component';
 
 @NgModule({
     imports: [
@@ -15,17 +17,23 @@ import { NgxEchartsModule } from 'ngx-echarts';
 
     ],
     exports: [
+        MaterialModule,
+        NgxEchartsModule,
         IndexComponent,
         FinanceComponent,
         PreviewComponent,
-        MaterialModule,
-        NgxEchartsModule
+        OverviewComponent,
+        DailyComponent,
+        MonthlyComponent
 
     ],
     declarations: [
         IndexComponent,
         FinanceComponent,
-        PreviewComponent
+        PreviewComponent,
+        OverviewComponent,
+        DailyComponent,
+        MonthlyComponent
     ],
     providers: [
   

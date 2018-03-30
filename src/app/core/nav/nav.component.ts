@@ -11,8 +11,9 @@ export class NavComponent {
     menuList: Array<any> = [
         {route:'/index',icon:'home',name:'Home',subMenuList:[],_collapse:false},
         {route:'',icon:'payment',name:'Cost',subMenuList:[
-            {route:'/finance',name:'Finance'},
-            {route:'/preview',name:'Preview'}
+            {route:'/overview',name:'Overview'},
+            {route:'/daily',name:'Daily'},
+            {route:'/monthly',name:'Monthly'}
         ],_collapse:false},
         {route:'',icon:'location_searching',name:'Data Search',subMenuList:[],_collapse:false},
         {route:'',icon:'equalizer',name:'Analysis',subMenuList:[

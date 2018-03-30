@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { 
+        MatAutocompleteModule,
         MatListModule,
         MatButtonModule,
         MatToolbarModule,
@@ -12,7 +13,9 @@ import {
         MatFormFieldModule,
         MatNativeDateModule,
         MatInputModule,
-        MatCardModule
+        MatCardModule,
+        MatTableModule,
+        MatPaginatorModule
     } from '@angular/material';
 
 
@@ -28,7 +31,12 @@ import {
         MatFormFieldModule,
         MatNativeDateModule,
         MatInputModule,
-        MatCardModule
+        MatCardModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatAutocompleteModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         MatListModule,
@@ -41,7 +49,12 @@ import {
         MatFormFieldModule,
         MatNativeDateModule,
         MatInputModule,
-        MatCardModule
+        MatCardModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatAutocompleteModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
 })
 export class MaterialModule { }
