@@ -59,3 +59,40 @@ $colorWhite: #fff;
 .pd20 {
     padding: 20px;
 }
+
+.def-card {
+    padding: 16px;
+}
+
+.def-card-iconwrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.def-card-icon {
+    width: 1em;
+    height: 1em;
+    line-height: 180%;
+}
+
+.def-card-title {
+    margin: 0;
+}
+
+.def-card-content {
+    margin: 0;
+    padding: 15px 4px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.def-card-content span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.def-card-footer {
+    font-size: .86rem;
+    padding: 10px 20px;
+    margin: 0 -16px -16px -16px;
+}

@@ -1,0 +1,71 @@
+<section class="row">
+    <div class="col-md-12">
+        <mat-card class="mb15 col-md-12">
+            <mat-form-field>
+                <input matInput placeholder="Message ID">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Destination Number">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [matDatepicker]="start" placeholder="Min date">
+                <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+                <mat-datepicker #start></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [matDatepicker]="end" placeholder="Max date">
+                <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+                <mat-datepicker #end></mat-datepicker>
+            </mat-form-field>
+            <button mat-button>Search</button>
+        </mat-card>
+    </div>
+    <div class="col-md-12 mb15">
+        <button mat-raised-button>Download</button>
+    </div>
+    <div class="col-md-12 mb30">
+        <mat-card>
+            <!-- <mat-toolbar color='primary' class="text-center"></mat-toolbar> -->
+            <div class='card-header'>Data Details</div>
+            <div class='card-content'>
+                <div class=' col-md-4 '>
+                    <mat-form-field class="status-item">
+                        <mat-select placeholder="Status" [formControl]="toppings" multiple>
+                            <mat-option *ngFor="let topping of toppingList" [value]="topping.value">{{topping.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <mat-table #table [dataSource]="dataSource">
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="position">
+                        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="weight">
+                        <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="symbol">
+                        <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"></mat-paginator>
+
+            </div>
+        </mat-card>
+    </div>
+</section>

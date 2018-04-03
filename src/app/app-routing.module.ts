@@ -6,6 +6,7 @@ import { PreviewComponent } from './shared/preview/preview.component';
 import { OverviewComponent } from './shared/cost/overview/overview.component';
 import { DailyComponent } from './shared/cost/daily/daily.component';
 import { MonthlyComponent } from './shared/cost/monthly/monthly.component';
+import { DataSearchComponent } from './shared/dataSearch/data.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   },{
     path: 'preview',
     component: PreviewComponent
+  }
+  ,{
+    path: 'dataSearh',
+    component: DataSearchComponent
   }
 ];
 

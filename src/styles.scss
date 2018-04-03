@@ -1,12 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-body {
-    font-family: 'Open Sans', 'Microsoft  Yahei UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    font-size: 16px;
-    color: #494949;
-    font-weight: 400;
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+button:focus {
+    outline: 0
 }
 
 
@@ -16,7 +12,7 @@ body {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    src: url(./assets/font/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
 
 .material-icons {
@@ -112,6 +108,18 @@ body {
     margin-left: 15px;
 }
 
+.mb0 {
+    margin-bottom: 0px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
 .mb15 {
     margin-bottom: 15px;
 }
@@ -120,8 +128,24 @@ body {
     margin-bottom: 30px;
 }
 
-.mb0 {
-    margin-bottom: 0px;
+.mt0 {
+    margin-top: 0px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt30 {
+    margin-top: 30px;
 }
 
 .text-center {
@@ -156,4 +180,34 @@ ul {
 .breadcrumb {
     padding: 0.75rem 0;
     background: none;
+}
+
+.page-wrapper {
+    padding: 1.6em
+}
+
+.def-card-header {
+    margin: -36px 0 0 !important;
+    height: 86px;
+    border-radius: 3px;
+}
+
+.header-orange {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+    box-shadow: 0 12px 20px -10px rgba(255, 152, 0, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(255, 152, 0, .2);
+}
+
+.header-green {
+    background: linear-gradient(60deg, #66bb6a, #43a047);
+    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(76, 175, 80, .2);
+}
+
+.header-red {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(244, 67, 54, .2);
+}
+
+.header-blue {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+    box-shadow: 0 12px 20px -10px rgba(0, 188, 212, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(0, 188, 212, .2);
 }

@@ -1,66 +1,59 @@
-<div class="page-wrapper">
-    <!-- breadcrumb #S -->
-    <ol class="breadcrumb">
-        <li>Cost / Monthly</li>
-    </ol>
-    <!-- breadcrumb #E -->
-    <section class="row">
-        <div class="col-md-12">
-            <section class="row">
-                <div class="col-md-12">
-                    <mat-card class="mb30">
-                        <mat-form-field>
-                            <input matInput [matDatepicker]="picker" placeholder="Time">
-                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                            <mat-datepicker #picker></mat-datepicker>
-                        </mat-form-field>
-                        <button mat-button>Search</button>
-                    </mat-card>
-                </div>
-            </section>
-        </div>
-        <!-- <div class="col-md-12">
+<section class="row">
+    <div class="col-md-12">
+        <section class="row">
+            <div class="col-md-12">
+                <mat-card class="mb30">
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Time">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <button mat-button>Search</button>
+                </mat-card>
+            </div>
+        </section>
+    </div>
+    <!-- <div class="col-md-12">
                 <h3 class="text-center">Title</h3>
             </div> -->
-        <div class="col-md-12 mb30">
-            <mat-card>
-                <mat-table #table [dataSource]="dataSource">
+    <div class="col-md-12 mb30">
+        <mat-card>
+            <mat-table #table [dataSource]="dataSource">
 
-                    <!-- Position Column -->
-                    <ng-container matColumnDef="position">
-                        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-                    </ng-container>
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                </ng-container>
 
-                    <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-                    </ng-container>
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                </ng-container>
 
-                    <!-- Weight Column -->
-                    <ng-container matColumnDef="weight">
-                        <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-                    </ng-container>
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                </ng-container>
 
-                    <!-- Symbol Column -->
-                    <ng-container matColumnDef="symbol">
-                        <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-                    </ng-container>
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                </ng-container>
 
-                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-                </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"></mat-paginator>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+            <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"></mat-paginator>
 
-            </mat-card>
-        </div>
-        <div class="col-md-12">
-            <mat-card class="mb30">
-                <div echarts [options]="options" class="demo-chart"></div>
-            </mat-card>
-        </div>
-    </section>
-</div>
+        </mat-card>
+    </div>
+    <div class="col-md-12">
+        <mat-card class="mb30">
+            <div echarts [options]="options" class="demo-chart"></div>
+        </mat-card>
+    </div>
+</section>

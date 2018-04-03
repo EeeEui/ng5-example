@@ -9,7 +9,7 @@ import { single } from './index.service';
 })
 export class IndexComponent {
     options: any;
-
+    
     constructor() { }
   
     ngOnInit() {

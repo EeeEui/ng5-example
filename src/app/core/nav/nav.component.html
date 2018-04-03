@@ -1,10 +1,5 @@
 <ul class="nav-style">
-    <!-- <li>
-        <a href="javascript:void(0);" routerLink="/index">
-            <i class="material-icons md-18 left mr15">&#xE88A;</i>
-            <span>Index</span>
-        </a>
-    </li> -->
+    <mat-toolbar>PaaSoo</mat-toolbar>
     <li *ngFor="let item of menuList">
         <a (click)="toggleCollapse(item)" [class.bgActive]="item._colapse" href="javascript:void(0);" routerLink='{{item.route}}'>
             <i class="material-icons md-18 left mr15">{{item.icon}}</i>

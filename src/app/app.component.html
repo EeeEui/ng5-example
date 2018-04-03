@@ -1,29 +1,75 @@
 <ng-container>
-    <mat-toolbar class="page-header">
-        <a href="javascript:void(0);" class="title">PaaSoo</a>
-        <button mat-icon-button class="white" (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
-        <span class="spacer"></span>
-        <button mat-icon-button class="white">
-                <mat-icon>favorite</mat-icon>
-            </button>
-        <button mat-icon-button class="white">
-                <mat-icon>favorite</mat-icon>
-            </button>
-    </mat-toolbar>
-
     <mat-sidenav-container class="page-container">
         <mat-sidenav #sidenav mode="side" opened="true" class="page-sidenav">
             <app-nav></app-nav>
         </mat-sidenav>
 
         <mat-sidenav-content>
-            <router-outlet></router-outlet>
+            <div class='page-wrapper'>
+                <!-- breadcrumb #S -->
+                <div class='row mb15'>
+                    <div class='col-lg-6 col-md-6 col-sm-12'>
+                        <ol class="def-breadcrumb">
+                            <li class='mb10'>Cost</li>
+                            <li>Overview</li>
+                        </ol>
+                    </div>
+                    <div class='col-lg-6 col-md-6 col-sm-12'>
+                        <ul class='row headline'>
+                            <li class='col-md-12 text-right'>
+                                <mat-form-field>
+                                    <mat-select>
+                                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                                            {{ food.viewValue }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <button mat-icon-button [matMenuTriggerFor]="lang">
+                                <mat-icon>language</mat-icon>
+                            </button>
+                                <mat-menu #lang="matMenu" disabled>
+                                    <button mat-menu-item>
+                                    <span>English</span>
+                                </button>
+                                    <button mat-menu-item>
+                                    <span>中文(简)</span>
+                                </button>
+                                    <button mat-menu-item>
+                                    <span>日本語</span>
+                                </button>
+                                </mat-menu>
+
+                                <button mat-icon-button [matMenuTriggerFor]="menu">
+                                    <mat-icon>account_box</mat-icon>
+                                </button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>
+                                        <mat-icon>dialpad</mat-icon>
+                                        <span>Redial</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <mat-icon>voicemail</mat-icon>
+                                        <span>Check voicemail</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <mat-icon>notifications_off</mat-icon>
+                                        <span>Disable alerts</span>
+                                    </button>
+                                </mat-menu>
+                            </li>
+                            <li class='col-md-12 text-right'>
+                                <span class='user-info'>Balance: 10000.830 CNY / Credit Limit: -10000.000 CNY</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- breadcrumb #E -->
+                <router-outlet></router-outlet>
+            </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 
-    <mat-toolbar class="page-footer">
+    <!-- <mat-toolbar class="page-footer">
         <small class="text-center">Paasoo technology limited.</small>
-    </mat-toolbar>
+    </mat-toolbar> -->
 </ng-container>

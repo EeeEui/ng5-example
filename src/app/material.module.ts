@@ -17,8 +17,9 @@ import {
         MatTableModule,
         MatPaginatorModule
     } from '@angular/material';
-
-
+    import { MatCheckboxModule } from '@angular/material/checkbox';
+    import { MatSelectModule } from '@angular/material/select';
+    import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
     imports: [
         MatListModule,
@@ -36,7 +37,10 @@ import {
         MatPaginatorModule,
         MatAutocompleteModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatCheckboxModule,
+        MatSelectModule,
+        MatMenuModule
     ],
     exports: [
         MatListModule,
@@ -54,7 +58,11 @@ import {
         MatPaginatorModule,
         MatAutocompleteModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatCheckboxModule,
+        MatSelectModule,
+        MatMenuModule
+
     ],
 })
 export class MaterialModule { }

@@ -10,22 +10,29 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class NavComponent {
     menuList: Array<any> = [
         {route:'/index',icon:'home',name:'Home',subMenuList:[],_collapse:false},
+
         {route:'',icon:'payment',name:'Cost',subMenuList:[
             {route:'/overview',name:'Overview'},
             {route:'/daily',name:'Daily'},
             {route:'/monthly',name:'Monthly'}
         ],_collapse:false},
-        {route:'',icon:'location_searching',name:'Data Search',subMenuList:[],_collapse:false},
+
+        {route:'/dataSearh',icon:'location_searching',name:'Data Search',subMenuList:[],_collapse:false},
+
         {route:'',icon:'equalizer',name:'Analysis',subMenuList:[
             {route:'/finance',name:'Finance'},
             {route:'/preview',name:'Preview'}
         ],_collapse:false},
+
         {route:'',icon:'send',name:'SMS Sending Tool',subMenuList:[],_collapse:false},
+
         {route:'',icon:'attach_money',name:'Price',subMenuList:[],_collapse:false},
+
         {route:'',icon:'shopping_cart',name:'Finance',subMenuList:[
             {route:'/finance',name:'Finance'},
             {route:'/preview',name:'Preview'}
         ],_collapse:false},
+        
         {route:'',icon:'settings',name:'Setting',subMenuList:[
             {route:'/finance',name:'Finance'},
             {route:'/preview',name:'Preview'}

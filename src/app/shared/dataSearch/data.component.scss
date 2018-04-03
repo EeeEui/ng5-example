@@ -1,0 +1,17 @@
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.status-item {
+    font-size: 14px;
+    width: 100%;
+}

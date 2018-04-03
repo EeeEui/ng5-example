@@ -2,10 +2,26 @@ $bgColor: #f2f2f2;
 $white: #fff;
 .page-container {
     position: absolute;
-    top: 56px;
-    bottom: 40px;
+    top: 0px;
+    bottom: 0px;
     left: 0;
     right: 0;
+}
+
+.page-wrapper {
+    padding: 1.6em;
+}
+
+.headline {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.def-breadcrumb {
+    list-style: none;
+    padding: 16px 0 0 0;
+    margin: 0;
 }
 
 .page-sidenav {
@@ -52,4 +68,9 @@ $white: #fff;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.user-info {
+    display: block;
+    margin-top: -15px;
 }
