@@ -13,26 +13,52 @@ export class IndexComponent {
     constructor() { }
   
     ngOnInit() {
-        let xAxisData = ['China','German','England','Japan'];
-        let data1 = [1,2,3,4];
-  
+
         this.options = {
-            tooltip: {},
+            color:['#ffffffcc'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            
+                    type: 'shadow'        
+                }
+            },
+            grid: {
+                left: '5%',
+                right: '14%',
+                bottom: '6%',
+                top:'14%',
+                containLabel: true,
+                borderColor: '#fff'
+            },
             xAxis: {
-                name:'Cost(CNY)',
-                data: xAxisData,
-            silent: false,
-            splitLine: {
-                show: false
+                nameTextStyle:{
+                    color: '#f2f2f2'
+                },
+                name:'Country',
+                data: ['China','Italy','England','Japan','America','Canada','Tailand','Cube','German','Ice'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#f2f2f2',
+                        type: 'dashed'
+                    }
                 }
             },
             yAxis: {
-                name:'Country'
+                nameTextStyle:{
+                    color: '#f2f2f2'
+                },
+                name:'Cost(CNY)',
+                axisLine: {
+                    lineStyle: {
+                        color: '#f2f2f2',
+                        type: 'dashed'
+                    }
+                }
             },
             series: [{
                 name: 'Cost(CNY)',
                 type: 'bar',
-                data: data1,
+                data:  [1,2,3,4,0,3,6,7,4,1],
                 animationDelay: function (idx) {
                     return idx * 10;
                 }
@@ -44,3 +70,5 @@ export class IndexComponent {
         };
     }
 }
+
+

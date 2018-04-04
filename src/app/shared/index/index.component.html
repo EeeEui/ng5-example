@@ -32,7 +32,7 @@
                 </div>
             </mat-card-header>
             <mat-card-content class="def-card-content">
-                <span>Cost</span>
+                <span>Rejected</span>
                 <h3>10000</h3>
             </mat-card-content>
             <mat-card-footer class="def-card-footer">
@@ -74,13 +74,19 @@
     </div>
 </section>
 <section class="row">
-    <div class="col-md-9">
-        <mat-card class="mb30 pd20">
-            <div echarts [options]="options" class="demo-chart"></div>
+    <div class="col-md-8">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header echarts [options]="options" class="header-red def-card-header def-chart"></mat-card-header>
+            <mat-card-content class="def-card-content">
+                <h4>前十个国家消耗</h4>
+            </mat-card-content>
+            <mat-card-footer class="def-card-footer">
+                2018-04-03
+            </mat-card-footer>
         </mat-card>
     </div>
-    <div class="col-md-3">
-        <mat-card class="mb30 pd20">
+    <div class="col-md-4">
+        <mat-card class="mb30 mt15 def-card">
             <mat-card-header class="card-headline mb15">
                 <mat-card-title class="card-title">API 账户</mat-card-title>
             </mat-card-header>
@@ -104,7 +110,7 @@
                 </ul>
             </mat-card-content>
         </mat-card>
-        <mat-card class="mb30 pd20">
+        <mat-card class="mb30 mt15 def-card">
             <mat-card-header class="card-headline mb15">
                 <mat-card-title class="card-title">快捷功能</mat-card-title>
             </mat-card-header>

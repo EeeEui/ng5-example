@@ -1,5 +1,7 @@
 <ul class="nav-style">
-    <mat-toolbar>PaaSoo</mat-toolbar>
+    <mat-toolbar class="def-toolbar mb30">
+        <img src='../assets/images/logo1.png'>
+    </mat-toolbar>
     <li *ngFor="let item of menuList">
         <a (click)="toggleCollapse(item)" [class.bgActive]="item._colapse" href="javascript:void(0);" routerLink='{{item.route}}'>
             <i class="material-icons md-18 left mr15">{{item.icon}}</i>
@@ -12,67 +14,4 @@
             </li>
         </ul>
     </li>
-    <!-- <li>
-        <a href="javascript:void(0);" routerLink="/finance">
-            <i class="material-icons md-18 left mr15"></i>
-            <span>Data Search</span>
-        </a>
-    </li>
-    <li>
-        <a href="javascript:void(0);">
-            <i class="material-icons md-18 left mr15">&#xE24B;</i>
-            <span>Analysis</span>
-            <i class="material-icons md-18 right">&#xE409;</i>
-        </a>
-        <ul class="sub-nav">
-            <li>
-                <a routerLink="/finance">Finance</a>
-            </li>
-            <li>
-                <a routerLink="/preview">Preview</a>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <a href="javascript:void(0);" routerLink="/finance">
-            <i class="material-icons md-18 left mr15">&#xE163;</i>
-            <span>SMS Sending Tool</span>
-        </a>
-    </li>
-    <li>
-        <a href="javascript:void(0);" routerLink="/finance">
-            <i class="material-icons md-18 left mr15">&#xE227;</i>
-            <span>Price</span>
-        </a>
-    </li>
-    <li>
-        <a href="javascript:void(0);">
-            <i class="material-icons md-18 left mr15">&#xE854;</i>
-            <span>Finance</span>
-            <i class="material-icons md-18 right">&#xE409;</i>
-        </a>
-        <ul class="sub-nav">
-            <li>
-                <a routerLink="/finance">Finance</a>
-            </li>
-            <li>
-                <a routerLink="/preview">Preview</a>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <a href="javascript:void(0);">
-            <i class="material-icons md-18 left mr15">&#xE8B8;</i>
-            <span>Setting</span>
-            <i class="material-icons md-18 right">&#xE409;</i>
-        </a>
-        <ul class="sub-nav">
-            <li>
-                <a routerLink="/finance">Finance</a>
-            </li>
-            <li>
-                <a routerLink="/preview">Preview</a>
-            </li>
-        </ul>
-    </li> -->
 </ul>

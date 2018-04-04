@@ -13,10 +13,12 @@ ul li a {
     padding: 14px;
     text-decoration: none;
     color: #565656;
+    margin: 15px 0;
 }
 
 ul li a:hover {
     background-color: $bgColor;
+    border-radius: 3px;
 }
 
 .bgActive {
@@ -29,6 +31,7 @@ ul li a:hover {
 
 .sub-nav li a {
     padding: 14px 14px 14px 50px;
+    margin: 10px 0;
 }
 
 .open {
@@ -56,5 +59,23 @@ ul li a:hover {
 }
 
 .nav-style {
-    width: 230px;
+    width: 250px;
+    padding: 10px 20px;
+}
+
+.def-toolbar {
+    border-bottom: 1px solid #eee;
+    background: none;
+}
+
+.def-toolbar img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.bgActive {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+    box-shadow: 0 12px 20px -10px rgba(0, 188, 212, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(0, 188, 212, .2);
+    border-radius: 3px;
+    color: #fff;
 }

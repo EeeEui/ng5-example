@@ -24,7 +24,7 @@ export class NavComponent {
             {route:'/preview',name:'Preview'}
         ],_collapse:false},
 
-        {route:'',icon:'send',name:'SMS Sending Tool',subMenuList:[],_collapse:false},
+        {route:'',icon:'send',name:'SMS Send',subMenuList:[],_collapse:false},
 
         {route:'',icon:'attach_money',name:'Price',subMenuList:[],_collapse:false},
 
