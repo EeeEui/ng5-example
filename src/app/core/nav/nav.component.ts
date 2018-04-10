@@ -9,7 +9,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class NavComponent {
     menuList: Array<any> = [
-        {route:'/index',icon:'home',name:'Home',subMenuList:[],_collapse:false},
+        {route:'/index',icon:'dashboard',name:'Home',subMenuList:[],_collapse:false},
 
         {route:'',icon:'payment',name:'Cost',subMenuList:[
             {route:'/overview',name:'Overview'},

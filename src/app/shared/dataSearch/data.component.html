@@ -1,33 +1,37 @@
 <section class="row">
-    <div class="col-md-12">
-        <mat-card class="mb15 col-md-12">
-            <mat-form-field>
-                <input matInput placeholder="Message ID">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Destination Number">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput [matDatepicker]="start" placeholder="Min date">
-                <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
-                <mat-datepicker #start></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput [matDatepicker]="end" placeholder="Max date">
-                <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
-                <mat-datepicker #end></mat-datepicker>
-            </mat-form-field>
-            <button mat-button>Search</button>
-        </mat-card>
-    </div>
     <div class="col-md-12 mb15">
+        <mat-form-field>
+            <input matInput placeholder="Message ID">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Destination Number">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [matDatepicker]="start" placeholder="Min date">
+            <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+            <mat-datepicker #start></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [matDatepicker]="end" placeholder="Max date">
+            <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+            <mat-datepicker #end></mat-datepicker>
+        </mat-form-field>
+        <button mat-mini-fab>
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <div class="col-md-12 mb30">
         <button mat-raised-button>Download</button>
     </div>
     <div class="col-md-12 mb30">
-        <mat-card>
-            <!-- <mat-toolbar color='primary' class="text-center"></mat-toolbar> -->
-            <div class='card-header'>Data Details</div>
-            <div class='card-content'>
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-pink def-card-header table-header">
+                <mat-card-title>
+                    <h5>Data search</h5>
+                    Cost Analysis for 2018-04
+                </mat-card-title>
+            </mat-card-header>
+            <div class='card-content mt15'>
                 <div class=' col-md-4 '>
                     <mat-form-field class="status-item">
                         <mat-select placeholder="Status" [formControl]="toppings" multiple>

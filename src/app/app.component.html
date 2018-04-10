@@ -18,15 +18,15 @@
                         <ul class='row headline'>
                             <li class='col-md-12 text-right'>
                                 <mat-form-field>
-                                    <mat-select>
-                                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                                            {{ food.viewValue }}
+                                    <mat-select [(value)]="selected">
+                                        <mat-option *ngFor="let api of apiItems" [value]="api.value">
+                                            {{ api.viewValue }}
                                         </mat-option>
                                     </mat-select>
                                 </mat-form-field>
                                 <button mat-icon-button [matMenuTriggerFor]="lang">
-                                <mat-icon>language</mat-icon>
-                            </button>
+                                    <mat-icon>language</mat-icon>
+                                </button>
                                 <mat-menu #lang="matMenu" disabled>
                                     <button mat-menu-item>
                                     <span>English</span>

@@ -1,5 +1,5 @@
 <section class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mb30">
         <mat-form-field>
             <input matInput [matDatepicker]="picker" placeholder="Time">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -17,11 +17,14 @@
             <mat-icon>search</mat-icon>
         </button>
     </div>
-    <!-- <div class="col-md-12">
-                <h3 class="text-center">Title</h3>
-            </div> -->
     <div class="col-md-12 mb30">
-        <mat-card>
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-pink def-card-header table-header">
+                <mat-card-title>
+                    <h5>Overview</h5>
+                    Cost Overview for the last 7 days
+                </mat-card-title>
+            </mat-card-header>
             <mat-table #table [dataSource]="dataSource">
 
                 <!-- Position Column -->
@@ -56,7 +59,13 @@
         </mat-card>
     </div>
     <div class="col-md-12">
-        <mat-card class="mb30">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-orange def-card-header table-header">
+                <mat-card-title>
+                    <h5>Daily Cost</h5>
+                    Cost Overview for the last 7 days
+                </mat-card-title>
+            </mat-card-header>
             <div echarts [options]="options" class="demo-chart"></div>
         </mat-card>
     </div>

@@ -1,23 +1,19 @@
 <section class="row">
-    <div class="col-md-12">
-        <section class="row">
-            <div class="col-md-12">
-                <mat-card class="mb30">
-                    <mat-form-field>
-                        <input matInput [matDatepicker]="picker" placeholder="Time">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>
-                    <button mat-button>Search</button>
-                </mat-card>
-            </div>
-        </section>
-    </div>
-    <!-- <div class="col-md-12">
-                <h3 class="text-center">Title</h3>
-            </div> -->
     <div class="col-md-12 mb30">
-        <mat-card>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Time">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="col-md-12 mb30">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-pink def-card-header table-header">
+                <mat-card-title>
+                    <h5>Monthly Cost</h5>
+                    Cost Analysis for 2018-04
+                </mat-card-title>
+            </mat-card-header>
             <mat-table #table [dataSource]="dataSource">
 
                 <!-- Position Column -->
@@ -52,7 +48,12 @@
         </mat-card>
     </div>
     <div class="col-md-12">
-        <mat-card class="mb30">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-orange def-card-header table-header">
+                <mat-card-title>
+                    <h5>Monthly Cost for Top 10 Destinations</h5>
+                </mat-card-title>
+            </mat-card-header>
             <div echarts [options]="options" class="demo-chart"></div>
         </mat-card>
     </div>
