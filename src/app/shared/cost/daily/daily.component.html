@@ -1,25 +1,21 @@
 <section class="row">
     <div class="col-md-12">
-        <section class="row">
-            <div class="col-md-12">
-                <mat-card class="mb30">
-                    <mat-form-field>
-                        <input matInput [matDatepicker]="picker" placeholder="Time">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input type="text" placeholder="country" matInput [formControl]="country" [matAutocomplete]="auto">
-                    </mat-form-field>
-                    <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option *ngFor="let option of selections" [value]="option">
-                            {{ option }}
-                        </mat-option>
-                    </mat-autocomplete>
-                    <button mat-button>Search</button>
-                </mat-card>
-            </div>
-        </section>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Time">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" placeholder="country" matInput [formControl]="country" [matAutocomplete]="auto">
+        </mat-form-field>
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of selections" [value]="option">
+                {{ option }}
+            </mat-option>
+        </mat-autocomplete>
+        <button mat-mini-fab>
+            <mat-icon>search</mat-icon>
+        </button>
     </div>
     <!-- <div class="col-md-12">
                 <h3 class="text-center">Title</h3>

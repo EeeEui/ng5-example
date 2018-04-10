@@ -37,6 +37,7 @@ $colorWhite: #fff;
 }
 
 .card-title {
+    color: #fff;
     margin: 5px;
     font-size: 16px;
     font-weight: 600;
@@ -44,7 +45,8 @@ $colorWhite: #fff;
 }
 
 .list-unstyled {
-    padding: 0 13px;
+    display: block;
+    padding: 20 13px;
 }
 
 .right-box {

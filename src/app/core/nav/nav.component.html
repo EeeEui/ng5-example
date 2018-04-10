@@ -3,14 +3,18 @@
         <img src='../assets/images/logo1.png'>
     </mat-toolbar>
     <li *ngFor="let item of menuList">
-        <a (click)="toggleCollapse(item)" [class.bgActive]="item._colapse" href="javascript:void(0);" routerLink='{{item.route}}'>
+        <a class="nav-list" *ngIf="!item.subMenuList.length" (click)="toggleCollapse(item)" [class.bgActive]="item._collapse" href="javascript:void(0);" routerLink='{{item.route}}'>
             <i class="material-icons md-18 left mr15">{{item.icon}}</i>
             <span>{{item.name}}</span>
-            <i *ngIf="item.subMenuList.length" class="material-icons md-18 right" [ngClass]="{open:item._collapse}">&#xE409;</i>
+        </a>
+        <a class="nav-list" *ngIf="item.subMenuList.length" (click)="toggleCollapse(item)" [class.subActive]="item._collapse" href="javascript:void(0);">
+            <i class="material-icons md-18 left mr15">{{item.icon}}</i>
+            <span>{{item.name}}</span>
+            <i class="material-icons md-18 right" [class.open]="item._collapse">&#xE409;</i>
         </a>
         <ul class="sub-nav" *ngIf="item.subMenuList.length && item._collapse">
             <li *ngFor="let sub of item.subMenuList">
-                <a href="javascript:void(0);" routerLink="{{sub.route}}">{{sub.name}}</a>
+                <a class="nav-list" href="javascript:void(0);" routerLink="{{sub.route}}">{{sub.name}}</a>
             </li>
         </ul>
     </li>
