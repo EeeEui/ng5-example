@@ -29,13 +29,15 @@ export const ROUTES: RouteInfo[] = [
     {path:'/price',icon:'attach_money',name:'Price',subMenuList:[],_collapse:false},
 
     {path:'',icon:'shopping_cart',name:'Finance',subMenuList:[
-        {path:'/finance',name:'Finance'},
-        {path:'/preview',name:'Preview'}
+        {path:'/finance',name:'Online Payment'},
+        {path:'/record',name:'Payment History'}
     ],_collapse:false},
     
     {path:'',icon:'settings',name:'Setting',subMenuList:[
-        {path:'/finance',name:'Finance'},
-        {path:'/preview',name:'Preview'}
+        {path:'/password',name:'Change Password'},
+        {path:'/profile',name:'Account Profile'},
+        {path:'/balance',name:'Balance Alert'},
+        {path:'/dlr',name:'DLR Setting'}
     ],_collapse:false},
 ];
 
