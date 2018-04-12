@@ -1,27 +1,18 @@
-.example-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 60px;
-}
-
-.example-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-}
-
 .status-item {
     font-size: 14px;
     width: 100%;
 }
 
 .def-card {
-    padding: 15px;
+    padding: 16px;
 }
 
 .table-header {
     padding: 15px 7px;
     font-weight: 300;
     color: #fff;
+}
+
+.btn-white {
+    background-color: #fff;
 }

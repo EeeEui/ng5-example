@@ -12,18 +12,6 @@ $white: #fff;
     padding: 0 20px 20px;
 }
 
-.headline {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-}
-
-.def-breadcrumb {
-    list-style: none;
-    padding: 16px 0 0 0;
-    margin: 0;
-}
-
 .page-sidenav {
     display: flex;
     width: 250px;
@@ -31,25 +19,8 @@ $white: #fff;
     box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .42), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
 }
 
-.page-header {
-    position: fixed;
-    height: 56px;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(to right, #00A5A8 0%, #1ce3e6 100%);
-}
-
 .icon {
     padding: 0 14px;
-}
-
-.spacer {
-    flex: 1 1 auto;
-}
-
-.white {
-    color: $white
 }
 
 .title {
@@ -68,9 +39,4 @@ $white: #fff;
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-.user-info {
-    display: block;
-    margin-top: -15px;
 }

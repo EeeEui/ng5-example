@@ -5,24 +5,13 @@
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <mat-form-field>
-            <input type="text" placeholder="country" matInput [formControl]="country" [matAutocomplete]="auto">
-        </mat-form-field>
-        <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of selections" [value]="option">
-                {{ option }}
-            </mat-option>
-        </mat-autocomplete>
-        <button mat-mini-fab class='btn-white'>
-            <mat-icon>search</mat-icon>
-        </button>
     </div>
     <div class="col-md-12 mb30">
         <mat-card class="mb30 mt15 def-card">
             <mat-card-header class="header-pink def-card-header table-header">
                 <mat-card-title>
-                    <h5>Monthly Cost</h5>
-                    Monthly Cost for 2018-04
+                    <h5>Monthly</h5>
+                    Delivery Receipts Statistics for 2018-04
                 </mat-card-title>
             </mat-card-header>
             <mat-table #table [dataSource]="dataSource" class="mt15">
@@ -55,17 +44,6 @@
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
             </mat-table>
             <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"></mat-paginator>
-
-        </mat-card>
-    </div>
-    <div class="col-md-12">
-        <mat-card class="mb30 mt15 def-card">
-            <mat-card-header class="header-orange def-card-header table-header">
-                <mat-card-title>
-                    <h5>Monthly Cost for Top 10 Destinations</h5>
-                </mat-card-title>
-            </mat-card-header>
-            <div echarts [options]="options" class="demo-chart"></div>
         </mat-card>
     </div>
 </section>

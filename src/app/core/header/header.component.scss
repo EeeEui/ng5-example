@@ -1,0 +1,24 @@
+$white: #fff;
+.headline {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-switch {
+    margin-right: 16px;
+    background-color: $white;
+    display: inline-block;
+}
+
+.def-breadcrumb {
+    display: inline-block;
+    list-style: none;
+    padding: 16px 0 0 0;
+    margin: 0;
+}
+
+.user-info {
+    display: block;
+    margin-top: -9px;
+}

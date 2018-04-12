@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../app-routing.module';
-import { NavComponent } from './nav/nav.component';
 import { MaterialModule } from '../material.module';
+import { NavComponent } from './nav/nav.component';
+import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
     imports: [
@@ -11,11 +13,13 @@ import { MaterialModule } from '../material.module';
         AppRoutingModule
     ],
     exports: [
+        MaterialModule,
         NavComponent,
-        MaterialModule
+        HeaderComponent
     ],
     declarations: [
-        NavComponent
+        NavComponent,
+        HeaderComponent
     ],
     providers: [
   

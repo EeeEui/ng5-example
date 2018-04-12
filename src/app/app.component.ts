@@ -6,11 +6,4 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	apiItems : Array <any> = [
-        {value: 'ratbt95y', viewValue: 'ratbt95y(Master)'},
-        {value: 'ratbt95y', viewValue: 'ratbt95y'},
-        {value: 'ratbt95y', viewValue: 'ratbt95y'}
-	];
-	selected: String = 'ratbt95y';
-	active: boolean = false;
 }

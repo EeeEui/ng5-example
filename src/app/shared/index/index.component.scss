@@ -45,11 +45,18 @@ $colorWhite: #fff;
 }
 
 .list-unstyled {
-    margin: 15px;
+    width: 100%;
+    margin: 20px 20px 20px 4px;
+    color: #fff;
+}
+
+.list-unstyled button {
+    color: #565656;
+    width: 48%;
 }
 
 .right-box {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
 }
 
 .right-box small {
@@ -69,7 +76,7 @@ $colorWhite: #fff;
 }
 
 .def-card {
-    padding: 15px;
+    padding: 16px;
 }
 
 .def-card-title {

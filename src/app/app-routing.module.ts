@@ -7,6 +7,10 @@ import { OverviewComponent } from './shared/cost/overview/overview.component';
 import { DailyComponent } from './shared/cost/daily/daily.component';
 import { MonthlyComponent } from './shared/cost/monthly/monthly.component';
 import { DataSearchComponent } from './shared/dataSearch/data.component';
+import { DailyAnalysisComponent } from './shared/analysis/daily/dailyAnalysis.component';
+import { MonthlyAnalysisComponent } from './shared/analysis/monthly/monthlyAnalysis.component';
+import { SendComponent } from './shared/send/send.component';
+
 
 const routes: Routes = [
   {
@@ -34,10 +38,18 @@ const routes: Routes = [
   },{
     path: 'preview',
     component: PreviewComponent
-  }
-  ,{
+  },{
     path: 'dataSearh',
     component: DataSearchComponent
+  },{
+    path: 'dailyAnalysis',
+    component: DailyAnalysisComponent
+  },{
+    path: 'monthlyAnalysis',
+    component: MonthlyAnalysisComponent
+  },{
+    path: 'send',
+    component: SendComponent
   }
 ];
 

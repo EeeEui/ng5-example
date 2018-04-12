@@ -112,6 +112,10 @@ button:focus {
     margin-left: 15px;
 }
 
+.ml55 {
+    margin-left: 55px;
+}
+
 .mb0 {
     margin-bottom: 0px;
 }
@@ -233,4 +237,8 @@ ul {
     background: linear-gradient(60deg, #ec407a, #d81b60);
     -webkit-box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
+}
+
+.btn-white {
+    background-color: #fff;
 }

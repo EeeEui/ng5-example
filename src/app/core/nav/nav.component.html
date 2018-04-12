@@ -3,7 +3,7 @@
         <img src='../assets/images/logo1.png'>
     </mat-toolbar>
     <li *ngFor="let item of menuList">
-        <a class="nav-list" *ngIf="!item.subMenuList.length" (click)="toggleCollapse(item)" [class.bgActive]="item._collapse" href="javascript:void(0);" routerLink='{{item.route}}'>
+        <a class="nav-list" *ngIf="!item.subMenuList.length" (click)="toggleCollapse(item)" routerLinkActive="bgActive" href="javascript:void(0);" routerLink='{{item.path}}'>
             <i class="material-icons md-18 left mr15">{{item.icon}}</i>
             <span>{{item.name}}</span>
         </a>
@@ -14,7 +14,7 @@
         </a>
         <ul class="sub-nav" *ngIf="item.subMenuList.length && item._collapse">
             <li *ngFor="let sub of item.subMenuList">
-                <a class="nav-list" href="javascript:void(0);" routerLink="{{sub.route}}">{{sub.name}}</a>
+                <a class="nav-list" href="javascript:void(0);" routerLinkActive="bgActive" routerLink="{{sub.path}}">{{sub.name}}</a>
             </li>
         </ul>
     </li>

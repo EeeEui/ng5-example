@@ -1,43 +1,59 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+
+declare interface RouteInfo {
+    path: string;
+    name: string;
+    icon: string;
+    subMenuList: Array<any>;
+    _collapse: boolean;
+}
+export const ROUTES: RouteInfo[] = [
+    {path:'/index',icon:'dashboard',name:'Dashboard',subMenuList:[],_collapse:false},
+
+    {path:'',icon:'payment',name:'Cost',subMenuList:[
+        {path:'/overview',name:'Overview'},
+        {path:'/daily',name:'Daily'},
+        {path:'/monthly',name:'Monthly'}
+    ],_collapse:false},
+
+    {path:'/dataSearh',icon:'location_searching',name:'Data Search',subMenuList:[],_collapse:false},
+
+    {path:'',icon:'equalizer',name:'Analysis',subMenuList:[
+        {path:'/dailyAnalysis',name:'Daily'},
+        {path:'/monthlyAnalysis',name:'Monthly'}
+    ],_collapse:false},
+
+    {path:'/send',icon:'send',name:'SMS Send',subMenuList:[],_collapse:false},
+
+    {path:'/price',icon:'attach_money',name:'Price',subMenuList:[],_collapse:false},
+
+    {path:'',icon:'shopping_cart',name:'Finance',subMenuList:[
+        {path:'/finance',name:'Finance'},
+        {path:'/preview',name:'Preview'}
+    ],_collapse:false},
+    
+    {path:'',icon:'settings',name:'Setting',subMenuList:[
+        {path:'/finance',name:'Finance'},
+        {path:'/preview',name:'Preview'}
+    ],_collapse:false},
+];
 
 @Component({
 	selector: 'app-nav',
 	templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.scss']
 })
+
 export class NavComponent {
-    menuList: Array<any> = [
-        {route:'/index',icon:'dashboard',name:'Home',subMenuList:[],_collapse:false},
+    menuList: any[];
 
-        {route:'',icon:'payment',name:'Cost',subMenuList:[
-            {route:'/overview',name:'Overview'},
-            {route:'/daily',name:'Daily'},
-            {route:'/monthly',name:'Monthly'}
-        ],_collapse:false},
+    constructor() { }
+  
+    ngOnInit() {
+      this.menuList = ROUTES.filter(menuItem => menuItem);
+    }
 
-        {route:'/dataSearh',icon:'location_searching',name:'Data Search',subMenuList:[],_collapse:false},
-
-        {route:'',icon:'equalizer',name:'Analysis',subMenuList:[
-            {route:'/finance',name:'Finance'},
-            {route:'/preview',name:'Preview'}
-        ],_collapse:false},
-
-        {route:'',icon:'send',name:'SMS Send',subMenuList:[],_collapse:false},
-
-        {route:'',icon:'attach_money',name:'Price',subMenuList:[],_collapse:false},
-
-        {route:'',icon:'shopping_cart',name:'Finance',subMenuList:[
-            {route:'/finance',name:'Finance'},
-            {route:'/preview',name:'Preview'}
-        ],_collapse:false},
-        
-        {route:'',icon:'settings',name:'Setting',subMenuList:[
-            {route:'/finance',name:'Finance'},
-            {route:'/preview',name:'Preview'}
-        ],_collapse:false}
-    ];
     toggleCollapse(i) {
         this.menuList.forEach( element => {
             if (element != i && element._collapse) {

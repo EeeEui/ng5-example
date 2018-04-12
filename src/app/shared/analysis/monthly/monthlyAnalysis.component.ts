@@ -1,20 +1,18 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
+
 @Component({
-    selector: 'app-monthly',
-    templateUrl: './monthly.component.html',
-    styleUrls: ['./monthly.component.scss']
+    selector: 'app-monthlyAnalysis',
+    templateUrl: './monthlyAnalysis.component.html',
+    styleUrls: ['./monthlyAnalysis.component.scss']
 })
-export class MonthlyComponent {
+export class MonthlyAnalysisComponent {
+
     country: FormControl = new FormControl();
     displayedColumns = ['position', 'name', 'weight', 'symbol'];
     dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
-    selections = [
-        'One',
-        'Two',
-        'Three'
-        ];
+  
     @ViewChild(MatPaginator) paginator: MatPaginator;
   
     /**
@@ -24,40 +22,7 @@ export class MonthlyComponent {
     ngAfterViewInit() {
       this.dataSource.paginator = this.paginator;
     }
-
-    options: any;
   
-    ngOnInit() {
-        let xAxisData = ['China','German','England','Japan'];
-        let data1 = [1,2,3,4];
-  
-        this.options = {
-            tooltip: {},
-            xAxis: {
-                name:'Cost(CNY)',
-                data: xAxisData,
-            silent: false,
-            splitLine: {
-                show: false
-                }
-            },
-            yAxis: {
-                name:'Country'
-            },
-            series: [{
-                name: 'Cost(CNY)',
-                type: 'bar',
-                data: data1,
-                animationDelay: function (idx) {
-                    return idx * 10;
-                }
-            }],
-            animationEasing: 'elasticOut',
-            animationDelayUpdate: function (idx) {
-                return idx * 5;
-            }
-        };
-    }
 }
   
   export interface Element {

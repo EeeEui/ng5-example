@@ -9,6 +9,10 @@ import { OverviewComponent } from './cost/overview/overview.component';
 import { DailyComponent } from './cost/daily/daily.component';
 import { MonthlyComponent } from './cost/monthly/monthly.component';
 import { DataSearchComponent } from './dataSearch/data.component';
+import { DailyAnalysisComponent } from './analysis/daily/dailyAnalysis.component';
+import { MonthlyAnalysisComponent } from './analysis/monthly/monthlyAnalysis.component';
+import { SendComponent } from './send/send.component';
+
 
 @NgModule({
     imports: [
@@ -26,7 +30,10 @@ import { DataSearchComponent } from './dataSearch/data.component';
         OverviewComponent,
         DailyComponent,
         MonthlyComponent,
-        DataSearchComponent
+        DataSearchComponent,
+        DailyAnalysisComponent,
+        MonthlyAnalysisComponent,
+        SendComponent
 
     ],
     declarations: [
@@ -36,7 +43,10 @@ import { DataSearchComponent } from './dataSearch/data.component';
         OverviewComponent,
         DailyComponent,
         MonthlyComponent,
-        DataSearchComponent
+        DataSearchComponent,
+        DailyAnalysisComponent,
+        MonthlyAnalysisComponent,
+        SendComponent
     ],
     providers: [
   
