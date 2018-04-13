@@ -1,1 +1,58 @@
- aaaaaa
+<section class="row">
+    <div class="col-md-12 mb15">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Country" aria-label="Country" [matAutocomplete]="auto" [formControl]="stateCtrl">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                    <img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
+                    <span>{{ state.name }}</span>
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+    <div class="col-md-12 mb30">
+        <button mat-raised-button>Download the price list</button>
+    </div>
+    <div class="col-md-12 mb30">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-blue def-card-header table-header">
+                <mat-card-title>
+                    <h5>Price</h5>
+                    Price list for country
+                </mat-card-title>
+            </mat-card-header>
+            <div class='card-content mt15'>
+                <mat-table #table [dataSource]="dataSource">
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="position">
+                        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="weight">
+                        <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="symbol">
+                        <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"></mat-paginator>
+
+            </div>
+        </mat-card>
+    </div>
+</section>

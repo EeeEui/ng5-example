@@ -19,10 +19,15 @@
         "prefix": "app",
         "styles": [
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
             "styles.scss"
         ],
         "scripts": [
-            "../node_modules/echarts/dist/echarts.min.js"
+            "../node_modules/jquery/dist/jquery.js",
+            "../node_modules/echarts/dist/echarts.min.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.js",
+            "../node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
+            "../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { NgUploaderModule } from 'ngx-uploader';
 import { IndexComponent } from './index/index.component';
 import { OverviewComponent } from './cost/overview/overview.component';
 import { DailyComponent } from './cost/daily/daily.component';
@@ -23,7 +24,8 @@ import { ProfileComponent } from './setting/profile/profile.component';
     imports: [
         CommonModule,
         MaterialModule,
-        NgxEchartsModule
+        NgxEchartsModule,
+        NgUploaderModule
 
     ],
     exports: [

@@ -1,5 +1,64 @@
 <section class="row">
-    <div class="col-md-12 mb30">
-        啊啊啊
+    <div class="col-md-10 offset-1 mb30 mt30">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-blue def-card-header table-header">
+                <mat-card-title>
+                    <mat-icon class="md-3 md-light def-card-icon">send</mat-icon>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="mt30">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-group mb30">
+                                <mat-form-field hintLabel="SenderID must be composed of 3~11 Latin characters and numbers. Spaces are allowed." class="def-input">
+                                    <input matInput #input maxlength="10" placeholder="SenderID" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group mb30">
+                                <mat-form-field hintLabel="The phone numbers must be in international format, such as 8618900000000, and should be separated by a comma (',')." class="def-input">
+                                    <input matInput #input maxlength="10" placeholder="Phone Number">
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group  mb30">
+                                <div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+                                    <p class="mb-0">
+                                        Drag or
+                                        <label class="upload-button">
+                                            <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple>
+                                            import
+                                        </label> a phone number list here
+                                    </p>
+                                </div>
+                                <small class="text-muted">Only .txt format file can be imported, and the phone numbers should be separated by a comma (',').</small>
+                                <div class="mt15" *ngFor="let f of files;">
+                                    <mat-progress-bar mode="determinate" [value]="f?.progress?.data?.percentage"></mat-progress-bar>
+                                    <small>{{ f.progress?.data?.speedHuman }} {{ f.progress?.data?.percentage }}%</small>
+                                </div>
+                            </div>
+                            <div class="form-group mb30">
+                                <mat-form-field hintLabel="The phone numbers must be in international format, such as 8618900000000, and should be separated by a comma (',')." class="def-input">
+                                    <input matInput #input maxlength="10" placeholder="Phone Number">
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group mb30">
+                                <mat-form-field class="def-input">
+                                    <textarea matInput #message placeholder="Autosize textarea" matTextareaAutosize matAutosizeMinRows="5" matAutosizeMaxRows="6" required></textarea>
+                                    <mat-hint align="start">Character Count:{{message.value.length}} - Messages: 0</mat-hint>
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group mb30">
+                                <mat-checkbox>I have read the terms of use</mat-checkbox>
+                            </div>
+                            <div class="form-group mb30">
+                                <button mat-raised-button color="primary">Send</button>
+                                <button mat-raised-button>Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
+
 </section>

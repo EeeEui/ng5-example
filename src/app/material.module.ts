@@ -19,7 +19,8 @@ import {
     } from '@angular/material';
     import { MatCheckboxModule } from '@angular/material/checkbox';
     import { MatSelectModule } from '@angular/material/select';
-    import {MatMenuModule} from '@angular/material/menu';
+    import { MatMenuModule } from '@angular/material/menu';
+    import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
     imports: [
         MatListModule,
@@ -40,7 +41,8 @@ import {
         ReactiveFormsModule,
         MatCheckboxModule,
         MatSelectModule,
-        MatMenuModule
+        MatMenuModule,
+        MatProgressBarModule
     ],
     exports: [
         MatListModule,
@@ -61,7 +63,8 @@ import {
         ReactiveFormsModule,
         MatCheckboxModule,
         MatSelectModule,
-        MatMenuModule
+        MatMenuModule,
+        MatProgressBarModule
 
     ],
 })

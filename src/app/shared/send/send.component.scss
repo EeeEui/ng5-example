@@ -6,8 +6,50 @@
     padding: 16px 8px;
     font-weight: 300;
     color: #fff;
+    width: 86px;
 }
 
 .btn-white {
     background-color: #fff;
+}
+
+.def-card-icon {
+    width: 1em;
+    height: 1em;
+    line-height: 120%;
+}
+
+.def-input {
+    width: 100%;
+}
+
+$blue: #00acc1;
+$black: #000;
+$white: #fff;
+$text-light: #ccc;
+.drop-container {
+    background: $white;
+    border-radius: 6px;
+    height: 80px;
+    width: 100%;
+    box-shadow: 1px 2px 20px rgba($black, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed $text-light;
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: $text-light;
+    }
+    .upload-button {
+        display: inline-block;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: $blue;
+    }
+    input {
+        display: none
+    }
 }
