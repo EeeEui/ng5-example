@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent {
-
+    phone: number = 8618900000000;
+    email: string = 'hana.jiang@paasoo.com';
 }

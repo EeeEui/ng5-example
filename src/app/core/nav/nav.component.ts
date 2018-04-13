@@ -24,7 +24,7 @@ export const ROUTES: RouteInfo[] = [
         {path:'/monthlyAnalysis',name:'Monthly'}
     ],_collapse:false},
 
-    {path:'/send',icon:'send',name:'SMS Send',subMenuList:[],_collapse:false},
+    {path:'/send',icon:'send',name:'SMS Send Tool',subMenuList:[],_collapse:false},
 
     {path:'/price',icon:'attach_money',name:'Price',subMenuList:[],_collapse:false},
 

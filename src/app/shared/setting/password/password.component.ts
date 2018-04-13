@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./password.component.scss']
 })
 export class PasswordComponent {
-
+    hide: boolean = true;
+    email: string = 'hana.jiang@paasoo.com';
 }
