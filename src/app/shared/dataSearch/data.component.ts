@@ -45,14 +45,14 @@ export class DataSearchComponent {
     }
 }
   
-  export interface Element {
+export interface Element {
     name: string;
     position: number;
     weight: number;
-    symbol: string;
-  }
+	symbol: string;
+}
   
-  const ELEMENT_DATA: Element[] = [
+const ELEMENT_DATA: Element[] = [
     {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
     {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
     {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -73,7 +73,7 @@ export class DataSearchComponent {
     {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
     {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
     {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
-  ];
+];
     
 
 

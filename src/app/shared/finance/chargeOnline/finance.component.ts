@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
 	selector: 'app-finance',
@@ -8,9 +9,24 @@ import { Component } from '@angular/core';
 
 export class FinanceComponent {
 
-	userObservable : Array<any> = [
-    	{'title':'Finance page'}];
- 
+  animalControl = new FormControl('', [Validators.required]);
+
+  animals = [
+    {name: 'Alipay'},
+    {name: 'PayPal'},
+    {name: 'Credit Card'},
+  ];
+
+  secondFormGroup: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder) { }
+
+  ngOnInit() {
+
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+  }
 }
 
 

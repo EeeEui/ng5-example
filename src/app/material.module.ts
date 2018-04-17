@@ -21,6 +21,7 @@ import {
     import { MatSelectModule } from '@angular/material/select';
     import { MatMenuModule } from '@angular/material/menu';
     import { MatProgressBarModule } from '@angular/material/progress-bar';
+    import { MatStepperModule } from '@angular/material/stepper';
 @NgModule({
     imports: [
         MatListModule,
@@ -42,7 +43,8 @@ import {
         MatCheckboxModule,
         MatSelectModule,
         MatMenuModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatStepperModule
     ],
     exports: [
         MatListModule,
@@ -64,7 +66,8 @@ import {
         MatCheckboxModule,
         MatSelectModule,
         MatMenuModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatStepperModule
 
     ],
 })
