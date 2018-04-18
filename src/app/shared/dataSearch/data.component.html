@@ -32,7 +32,7 @@
                 </mat-card-title>
             </mat-card-header>
             <div class='card-content mt15'>
-                <div class=' col-md-4 '>
+                <div class='col-md-4 offset-8'>
                     <mat-form-field class="status-item">
                         <mat-select placeholder="Status" [formControl]="toppings" multiple>
                             <mat-option *ngFor="let topping of toppingList" [value]="topping.value">{{topping.name}}</mat-option>
@@ -40,29 +40,65 @@
                     </mat-form-field>
                 </div>
                 <mat-table #table [dataSource]="dataSource">
-                    <!-- Position Column -->
-                    <ng-container matColumnDef="position">
-                        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+
+                    <ng-container matColumnDef="mId">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Message ID </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.mId}} </mat-cell>
                     </ng-container>
 
-                    <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                    <ng-container matColumnDef="destinations">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Destinations </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.destinations}} </mat-cell>
                     </ng-container>
 
-                    <!-- Weight Column -->
-                    <ng-container matColumnDef="weight">
-                        <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                    <ng-container matColumnDef="networkName">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Network Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.networkName}} </mat-cell>
                     </ng-container>
 
-                    <!-- Symbol Column -->
-                    <ng-container matColumnDef="symbol">
-                        <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                    <ng-container matColumnDef="networkCode">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Network Code </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.networkCode}} </mat-cell>
                     </ng-container>
+
+                    <ng-container matColumnDef="message">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Messages </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.message}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sId">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> SenderID </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.sId}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="deNumber">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Destination Number </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.deNumber}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="cost">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Cost (CNY) </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.cost}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="status">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Status </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="time">
+                        <mat-header-cell *matHeaderCellDef class="def-thead"> Time(UTC) </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+                    </ng-container>
+
+                    <!-- <ng-container>
+                        <mat-header-cell class="def-thead"> Details </mat-header-cell>
+                        <mat-cell>
+                            <button mat-icon-button>
+                                <mat-icon aria-label="more">more</mat-icon>
+                            </button>
+                        </mat-cell>
+                    </ng-container> -->
 
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

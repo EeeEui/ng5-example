@@ -11,3 +11,19 @@
 .btn-white {
     background-color: #fff;
 }
+
+.mat-table {
+    overflow: auto;
+    max-height: 600px;
+}
+
+.def-thead {
+    color: #00acc1;
+    font-size: 1em;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}

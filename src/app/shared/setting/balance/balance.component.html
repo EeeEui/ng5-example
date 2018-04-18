@@ -1,1 +1,103 @@
-aaaaaa
+<section class="row">
+    <div class="col-md-10 offset-1 mb30 mt30">
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-blue def-card-header table-header">
+                <mat-card-title>
+                    <mat-icon class="md-3 md-light def-card-icon">send</mat-icon>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="mt30 form-pd">
+                <h5>Balance Alert</h5>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class='mt15'>
+                            <div class="form-group mb30">
+                                <mat-form-field class="def-input">
+                                    <input matInput placeholder="Email" disabled [value]="email">
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group mb30">
+                                <mat-form-field class="def-input">
+                                    <input matInput #input placeholder="Contact Person" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group mb30">
+                                <mat-form-field class="def-input">
+                                    <input matInput #input placeholder="Balance Threshold" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="form-group mb30">
+                                <table class="def-input" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <mat-form-field class="def-input">
+                                                <mat-select [(value)]="selected">
+                                                    <mat-option value="86">+86</mat-option>
+                                                    <mat-option value="1">+1</mat-option>
+                                                    <mat-option value="3">+3</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </td>
+                                        <td>
+                                            <mat-form-field class="def-input">
+                                                <input matInput placeholder="Notification SMS Numbers">
+                                            </mat-form-field>
+                                        </td>
+                                        <td>
+                                            <button mat-icon-button>
+                                                <mat-icon aria-label="Add">add</mat-icon>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="form-group mb30">
+
+                                <table class="def-input" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <mat-form-field class="def-input">
+                                                <input matInput #input placeholder="Notification Email">
+                                            </mat-form-field>
+                                        </td>
+                                        <td>
+                                            <button mat-icon-button>
+                                                <mat-icon aria-label="Add">add</mat-icon>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="form-group mb30">
+                                <table class="def-input" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <mat-form-field class="def-input">
+                                                <input matInput placeholder="Urgent Name">
+                                            </mat-form-field>
+                                        </td>
+                                        <td>
+                                            <mat-form-field class="def-input">
+                                                <input matInput placeholder="Urgent Phone Number">
+                                            </mat-form-field>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="form-group mb30">
+                                <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                                    Enable Reminders
+                                </mat-slide-toggle>
+                            </div>
+                            <div class="form-group mb30">
+                                <button mat-raised-button color="primary">Save</button>
+                                <button mat-raised-button>Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>

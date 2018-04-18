@@ -16,28 +16,59 @@
             </mat-card-header>
             <mat-table #table [dataSource]="dataSource" class="mt15">
 
-                <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                <ng-container matColumnDef="country">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Country </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.country}} </mat-cell>
                 </ng-container>
 
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                <ng-container matColumnDef="networkName">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Network Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.networkName}} </mat-cell>
                 </ng-container>
 
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                <ng-container matColumnDef="networkCode">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Network Code </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.networkCode}} </mat-cell>
                 </ng-container>
 
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                <ng-container matColumnDef="send">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Total Sent </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.send}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="successful">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Successful </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.successful}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="accepted">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Accepted </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.accepted}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="failed">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Failed </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.failed}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="rejected">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Rejected </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.rejected}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="unknown">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Unknown </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.unknown}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="unreachable">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Unreachable </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.unreachable}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="successRate">
+                    <mat-header-cell *matHeaderCellDef class="def-thead"> Success Rate </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.successRate}} </mat-cell>
                 </ng-container>
 
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

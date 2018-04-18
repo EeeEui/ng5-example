@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @Component({
@@ -20,12 +20,10 @@ export class DailyComponent {
     dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
   
     @ViewChild(MatPaginator) paginator: MatPaginator;
-  
-    /**
-     * Set the paginator after the view init since this component will
-     * be able to query its view for the initialized paginator.
-     */
+    @ViewChild(MatSort) sort: MatSort;
+
     ngAfterViewInit() {
+      this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     }
 

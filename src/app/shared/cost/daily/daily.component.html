@@ -44,17 +44,17 @@
                 </ng-container>
 
                 <ng-container matColumnDef="network">
-                    <mat-header-cell class="def-thead" *matHeaderCellDef> Network Code </mat-header-cell>
+                    <mat-header-cell class="def-thead" *matHeaderCellDef mat-sort-header> Network Code </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.network}} </mat-cell>
                 </ng-container>
 
                 <ng-container matColumnDef="message">
-                    <mat-header-cell class="def-thead" *matHeaderCellDef> Messages </mat-header-cell>
+                    <mat-header-cell class="def-thead" *matHeaderCellDef mat-sort-header> Messages </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.message}} </mat-cell>
                 </ng-container>
 
                 <ng-container matColumnDef="cost">
-                    <mat-header-cell class="def-thead" *matHeaderCellDef> Cost(CNY) </mat-header-cell>
+                    <mat-header-cell class="def-thead" *matHeaderCellDef mat-sort-header> Cost(CNY) </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.cost}} </mat-cell>
                 </ng-container>
 

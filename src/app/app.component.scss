@@ -13,6 +13,7 @@ $white: #fff;
 }
 
 .page-sidenav {
+    overflow-x: hidden;
     display: flex;
     width: 250px;
     background: url('../assets/images/bg.png') no-repeat top;

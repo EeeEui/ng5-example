@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./balance.component.scss']
 })
 export class BalanceComponent {
-
+    hide: boolean = true;
+    email: string = 'hana.jiang@paasoo.com';
+    selected = '86';
+    color = 'accent';
+    checked = false;
+    disabled = false;
 }
