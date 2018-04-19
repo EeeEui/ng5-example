@@ -15,14 +15,14 @@
     <div class='col-lg-6 col-md-6 col-sm-12'>
         <ul class='row headline'>
             <li class='col-md-12 text-right'>
-                <mat-form-field>
+                <mat-form-field class="mr15">
                     <mat-select [(value)]="selected">
                         <mat-option *ngFor="let api of apiItems" [value]="api.value">
                             {{ api.viewValue }}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-                <button mat-icon-button [matMenuTriggerFor]="lang">
+                <button class="mr15" mat-icon-button [matMenuTriggerFor]="lang">
                     <mat-icon>language</mat-icon>
                 </button>
                 <mat-menu #lang="matMenu" disabled>
@@ -37,10 +37,10 @@
                 </button>
                 </mat-menu>
 
-                <button mat-icon-button [matMenuTriggerFor]="menu">
-                    <mat-icon>account_box</mat-icon>
+                <button class="mr15" mat-icon-button [matMenuTriggerFor]="account">
+                    <mat-icon>perm_identity</mat-icon>
                 </button>
-                <mat-menu #menu="matMenu">
+                <mat-menu #account="matMenu">
                     <button mat-menu-item>
                         <mat-icon>dialpad</mat-icon>
                         <span>Redial</span>

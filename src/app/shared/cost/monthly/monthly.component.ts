@@ -1,20 +1,55 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import {Observable} from 'rxjs/Observable';
+import {startWith} from 'rxjs/operators/startWith';
+import {map} from 'rxjs/operators/map';
+export class State {
+    constructor(public name: string, public flag: string) { }
+  }
+
 @Component({
     selector: 'app-monthly',
     templateUrl: './monthly.component.html',
     styleUrls: ['./monthly.component.scss']
 })
 export class MonthlyComponent {
-    country: FormControl = new FormControl();
+    stateCtrl: FormControl;
+    filteredStates: Observable<any[]>;
+
+  states: State[] = [
+    {
+      name: 'Arkansas',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
+    },
+    {
+      name: 'California',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
+    },
+    {
+      name: 'Florida',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
+    },
+    {
+      name: 'Texas',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    }
+  ];
+  constructor() {
+    this.stateCtrl = new FormControl();
+    this.filteredStates = this.stateCtrl.valueChanges
+      .pipe(
+        startWith(''),
+        map(state => state ? this.filterStates(state) : this.states.slice())
+      );
+  }
+
+  filterStates(name: string) {
+    return this.states.filter(state =>
+      state.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
+  }
     displayedColumns = ['position', 'country', 'networkName', 'network', 'message', 'cost'];
     dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
-    selections = [
-        'One',
-        'Two',
-        'Three'
-        ];
     @ViewChild(MatPaginator) paginator: MatPaginator;
   
     /**
@@ -28,35 +63,41 @@ export class MonthlyComponent {
     options: any;
   
     ngOnInit() {
-        let xAxisData = ['China','German','England','Japan'];
-        let data1 = [1,2,3,4];
-  
-        this.options = {
-            tooltip: {},
-            xAxis: {
-                name:'Cost(CNY)',
-                data: xAxisData,
-            silent: false,
-            splitLine: {
-                show: false
-                }
-            },
-            yAxis: {
-                name:'Country'
-            },
-            series: [{
-                name: 'Cost(CNY)',
-                type: 'bar',
-                data: data1,
-                animationDelay: function (idx) {
-                    return idx * 10;
-                }
-            }],
-            animationEasing: 'elasticOut',
-            animationDelayUpdate: function (idx) {
-                return idx * 5;
+      this.options = {
+        color:['#eb3e78'],
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            
+                type: 'shadow'        
             }
-        };
+        },
+        grid: {
+            left: '5%',
+            right: '10%',
+            bottom: '6%',
+            top:'14%',
+            containLabel: true
+        },
+        xAxis: {
+            name:'Country',
+            data: ['China','Italy','England','Japan','America','Canada','Tailand','Cube','German','Ice']
+        },
+        yAxis: {
+            name:'Cost(CNY)'
+        },
+        series: [{
+            name: 'Cost(CNY)',
+            type: 'bar',
+            data:  [1,2,3,4,0,3,6,7,4,1],
+            animationDelay: function (idx) {
+                return idx * 10;
+            }
+        }],
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
+    };
     }
 }
   

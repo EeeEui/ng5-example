@@ -1,6 +1,7 @@
 import { Component, EventEmitter } from '@angular/core';
 import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, UploadStatus } from 'ngx-uploader';
-
+import {MatTableDataSource} from '@angular/material';
+import {SelectionModel} from '@angular/cdk/collections';
 @Component({
     selector: 'app-send',
     templateUrl: './send.component.html',
@@ -73,5 +74,6 @@ export class SendComponent {
     removeAllFiles(): void {
       this.uploadInput.emit({ type: 'removeAll' });
     }
-  }
+}
+
   

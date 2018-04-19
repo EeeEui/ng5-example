@@ -8,25 +8,7 @@ import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 
 export class FinanceComponent {
-
-  animalControl = new FormControl('', [Validators.required]);
-
-  animals = [
-    {name: 'Alipay'},
-    {name: 'PayPal'},
-    {name: 'Credit Card'},
-  ];
-
-  secondFormGroup: FormGroup;
-
-  constructor(private _formBuilder: FormBuilder) { }
-
-  ngOnInit() {
-
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
-  }
+  email: string = 'hana.jiang@paasoo.com '
 }
 
 

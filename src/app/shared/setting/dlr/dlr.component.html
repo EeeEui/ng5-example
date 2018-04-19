@@ -8,31 +8,78 @@
             </div>
             <div class="col-md-1">
                 <button mat-mini-fab class='btn-white'>
-                    <mat-icon>search</mat-icon>
+                    <mat-icon>check</mat-icon>
                 </button>
             </div>
         </div>
     </div>
     <div class="col-md-10 offset-1 mt30">
         <mat-card class="def-card">
+            <mat-card-header class="header-blue def-card-header table-header">
+                <mat-card-title>
+                    <mat-icon class="md-3 md-light def-card-icon">view_list</mat-icon>
+                </mat-card-title>
+            </mat-card-header>
             <mat-card-content class="mt30 form-pd">
-                <h5>Callback Method</h5>
                 <div class="row">
                     <div class="col-md-12">
-                        <table>
+                        <h5>Callback Method</h5>
+                        <table class="table table-striped table-bordered">
                             <tbody>
                                 <tr>
-                                    <td>Request Method</td>
+                                    <td class="def-td">Request Method</td>
                                     <td>HTTP GET</td>
                                 </tr>
                                 <tr>
-                                    <td>Callback URL</td>
-                                    <td>The customer can specify a callback URL</td>
+                                    <td class="def-td">Callback URL</td>
+                                    <td class="break-td">The customer can specify a callback URL</td>
                                 </tr>
                                 <tr>
-                                    <td>Example</td>
-                                    <td>http://USER_CALLBACK_URL?type=dlr&messageid=MESSAGE_ID&to=6588888888&status=0&statuscode=delivered&errcode=1&network=52099
+                                    <td class="def-td">Example</td>
+                                    <td class="break-td">http://USER_CALLBACK_URL?type=dlr&messageid=MESSAGE_ID&to=6588888888&status=0&statuscode=delivered&errcode=1&network=52099
                                     </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5 class="mt30">Parameters Definition</h5>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Parameters</td>
+                                    <td>Parameters Definition</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td class="break-td">the type of the callback information,'dlr' means delivery receipt</td>
+                                </tr>
+                                <tr>
+                                    <td>messageId</td>
+                                    <td class="break-td">unique ID for successful SMS requests</td>
+                                </tr>
+                                <tr>
+                                    <td>to</td>
+                                    <td class="break-td">destination phone number (international format) network: destination phone number's network code</td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>
+                                        basic status of the message: <br> 0 - delivered; <br> 400 - delivery errors
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>statuscode</td>
+                                    <td>detailed status of the message, for example: <br> delivered(0) - the message has been delivered to the destination phone number; <br> accepted(0) - the carrier accepted to send this message; <br> failed(400) - the carrier
+                                        failed to deliver this message; <br> rejected(400) - the carrier rejected this message; <br> unknown(400) - unknown status code from the carrier</td>
+                                </tr>
+                                <tr>
+                                    <td>errcode</td>
+                                    <td class="break-td">The customer can specify a callback URL</td>
+                                </tr>
+                                <tr>
+                                    <td>network</td>
+                                    <td>destination phone number's network code</td>
                                 </tr>
                             </tbody>
                         </table>

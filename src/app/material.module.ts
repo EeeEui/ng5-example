@@ -22,8 +22,11 @@ import {
     import { MatMenuModule } from '@angular/material/menu';
     import { MatProgressBarModule } from '@angular/material/progress-bar';
     import { MatStepperModule } from '@angular/material/stepper';
+    import { MatRadioModule } from '@angular/material/radio';
+    import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+    import { MatTabsModule } from '@angular/material/tabs';
+    import { MatExpansionModule } from '@angular/material/expansion';
 
-    import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
     imports: [
         MatListModule,
@@ -47,7 +50,10 @@ import {
         MatMenuModule,
         MatProgressBarModule,
         MatStepperModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatRadioModule,
+        MatTabsModule,
+        MatExpansionModule
     ],
     exports: [
         MatListModule,
@@ -71,8 +77,10 @@ import {
         MatMenuModule,
         MatProgressBarModule,
         MatStepperModule,
-        MatSlideToggleModule
-
+        MatSlideToggleModule,
+        MatRadioModule,
+        MatTabsModule,
+        MatExpansionModule
     ],
 })
 export class MaterialModule { }

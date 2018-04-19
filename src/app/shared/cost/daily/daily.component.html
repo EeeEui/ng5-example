@@ -5,14 +5,15 @@
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <mat-form-field>
-            <input type="text" placeholder="country" matInput [formControl]="country" [matAutocomplete]="auto">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Country" aria-label="Country" [matAutocomplete]="auto" [formControl]="stateCtrl">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                    <img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
+                    <span>{{ state.name }}</span>
+                </mat-option>
+            </mat-autocomplete>
         </mat-form-field>
-        <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of selections" [value]="option">
-                {{ option }}
-            </mat-option>
-        </mat-autocomplete>
         <button mat-mini-fab class='btn-white'>
             <mat-icon>search</mat-icon>
         </button>
@@ -67,13 +68,15 @@
     </div>
     <div class="col-md-12">
         <mat-card class="mb30 mt15 def-card">
-            <mat-card-header class="header-orange def-card-header table-header">
+            <mat-card-header class="header-pink def-card-header chart-header">
                 <mat-card-title>
-                    <h5>Daily Cost</h5>
-                    Cost Overview for the last 7 days
+                    <mat-icon class="md-3 md-light def-card-icon">equalizer</mat-icon>
                 </mat-card-title>
             </mat-card-header>
-            <div echarts [options]="options" class="demo-chart"></div>
+            <mat-card-content class="mt30 form-pd">
+                <h5>Top 10 Destinations</h5>
+                <div echarts [options]="options" class="demo-chart"></div>
+            </mat-card-content>
         </mat-card>
     </div>
 </section>
