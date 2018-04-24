@@ -7,21 +7,23 @@
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content class="mt30 form-pd">
-                <h5>SMS Send Tool</h5>
+                <h4>SMS Send Tool</h4>
                 <div class="row">
                     <div class="col-md-12">
                         <form class='mt15'>
                             <div class="form-group mb30">
-                                <mat-form-field hintLabel="SenderID must be composed of 3~11 Latin characters and numbers. Spaces are allowed." class="def-input">
-                                    <input matInput #input maxlength="10" placeholder="SenderID" required>
+                                <mat-form-field class="def-input">
+                                    <mat-label>SenderID</mat-label>
+                                    <input matInput placeholder="SenderID must be composed of 3~11 Latin characters and numbers" required>
                                 </mat-form-field>
                             </div>
                             <div class="form-group mb30">
-                                <mat-form-field hintLabel="The phone numbers must be in international format, such as 8618900000000, and should be separated by a comma (',')." class="def-input">
-                                    <input matInput #input maxlength="10" placeholder="Phone Number">
+                                <mat-form-field class="def-input">
+                                    <mat-label>Phone Number</mat-label>
+                                    <input matInput placeholder="The phone numbers must be in international format, such as 8618900000000">
                                 </mat-form-field>
                             </div>
-                            <div class="form-group  mb30">
+                            <div class="form-group mb30">
                                 <div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
                                     <p class="mb-0">
                                         Drag or
@@ -34,19 +36,16 @@
                                 <small class="text-muted">Only .txt format file can be imported, and the phone numbers should be separated by a comma (',').</small>
                                 <div class="mt15" *ngFor="let f of files;">
                                     <mat-progress-bar mode="determinate" [value]="f?.progress?.data?.percentage"></mat-progress-bar>
-                                    <small>{{ f.progress?.data?.speedHuman }} {{ f.progress?.data?.percentage }}%</small>
+                                    <small class="text-muted">{{ f.progress?.data?.speedHuman }} {{ f.progress?.data?.percentage }}%</small>
                                 </div>
                             </div>
                             <div class="form-group mb30">
                                 <mat-accordion>
                                     <mat-expansion-panel>
                                         <mat-expansion-panel-header>
-                                            <mat-panel-title>
+                                            <mat-panel-title class="p-0">
                                                 Phone number list
                                             </mat-panel-title>
-                                            <mat-panel-description>
-                                                Manage your phone number list
-                                            </mat-panel-description>
                                         </mat-expansion-panel-header>
                                         <mat-list class="mb20">
                                             <mat-list-item>
@@ -107,7 +106,7 @@
                             <div class="form-group mb30">
                                 <mat-form-field class="def-input">
                                     <textarea matInput #message placeholder="Message content" matTextareaAutosize matAutosizeMinRows="5" matAutosizeMaxRows="6" required></textarea>
-                                    <mat-hint align="start">Character Count:{{message.value.length}} - Messages: 0</mat-hint>
+                                    <mat-hint class="small" align="end">Character Count:{{message.value.length}} - Messages: 0</mat-hint>
                                 </mat-form-field>
                             </div>
                             <div class="form-group mb30">

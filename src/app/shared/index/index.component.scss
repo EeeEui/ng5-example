@@ -39,7 +39,6 @@ $colorWhite: #fff;
 .card-title {
     color: #fff;
     margin: 15px 7px;
-    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -85,12 +84,11 @@ $colorWhite: #fff;
 
 .def-card-content {
     margin: 0;
-    padding: 15px 4px 10px;
+    padding: 10px 4px;
     border-bottom: 1px solid #eee;
 }
 
 .def-card-content span {
-    font-size: 14px;
     font-weight: 400;
 }
 
@@ -116,4 +114,21 @@ $colorWhite: #fff;
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+.table-header {
+    padding: 16px 8px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.chart-header {
+    padding: 16px 8px;
+    font-weight: 300;
+    color: #fff;
+    width: 86px;
+}
+
+.btn-white {
+    background-color: #fff;
 }

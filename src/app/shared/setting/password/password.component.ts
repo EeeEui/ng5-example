@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class PasswordComponent {
     hide: boolean = true;
+    confirm: boolean = true;
     email: string = 'hana.jiang@paasoo.com';
 }

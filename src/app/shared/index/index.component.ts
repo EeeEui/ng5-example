@@ -15,7 +15,7 @@ export class IndexComponent {
     ngOnInit() {
 
         this.options = {
-            color:['#ffffffcc'],
+            color:['#eb3e78'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {            
@@ -27,33 +27,14 @@ export class IndexComponent {
                 right: '14%',
                 bottom: '6%',
                 top:'14%',
-                containLabel: true,
-                borderColor: '#fff'
+                containLabel: true
             },
             xAxis: {
-                nameTextStyle:{
-                    color: '#f2f2f2'
-                },
                 name:'Country',
-                data: ['China','Italy','England','Japan','America','Canada','Tailand','Cube','German','Ice'],
-                axisLine: {
-                    lineStyle: {
-                        color: '#f2f2f2',
-                        type: 'dashed'
-                    }
-                }
+                data: ['China','Italy','England','Japan','America','Canada','Tailand','Cube','German','Ice']
             },
             yAxis: {
-                nameTextStyle:{
-                    color: '#f2f2f2'
-                },
-                name:'Cost(CNY)',
-                axisLine: {
-                    lineStyle: {
-                        color: '#f2f2f2',
-                        type: 'dashed'
-                    }
-                }
+                name:'Cost(CNY)'
             },
             series: [{
                 name: 'Cost(CNY)',

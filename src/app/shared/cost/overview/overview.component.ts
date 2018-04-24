@@ -34,22 +34,31 @@ export class OverviewComponent {
         let data1 = [1,2,3,4];
   
         this.options = {
-            tooltip: {},
-            xAxis: {
-                name:'Cost(CNY)',
-                data: xAxisData,
-            silent: false,
-            splitLine: {
-                show: false
+            color:['#eb3e78'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            
+                    type: 'shadow'        
                 }
             },
+            grid: {
+                left: '5%',
+                right: '10%',
+                bottom: '6%',
+                top:'14%',
+                containLabel: true
+            },
+            xAxis: {
+                name:'Country',
+                data: ['China','Italy','England','Japan','America','Canada','Tailand','Cube','German','Ice']
+            },
             yAxis: {
-                name:'Country'
+                name:'Cost(CNY)'
             },
             series: [{
                 name: 'Cost(CNY)',
                 type: 'bar',
-                data: data1,
+                data:  [1,2,3,4,0,3,6,7,4,1],
                 animationDelay: function (idx) {
                     return idx * 10;
                 }

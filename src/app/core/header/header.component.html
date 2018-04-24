@@ -22,6 +22,7 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
+
                 <button class="mr15" mat-icon-button [matMenuTriggerFor]="lang">
                     <mat-icon>language</mat-icon>
                 </button>
@@ -43,7 +44,9 @@
                 <mat-menu #account="matMenu">
                     <div class="pd20">
                         <h6>Hello,</h6>
-                        <h6>hana.jiang@paasoo.com</h6>
+                        <h6 class="mb15">hana.jiang@paasoo.com</h6>
+                        <button mat-raised-button>Account</button>
+                        <button mat-raised-button color="primary">Log out</button>
                     </div>
                 </mat-menu>
             </li>

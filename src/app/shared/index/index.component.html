@@ -17,7 +17,7 @@
             </mat-card-header>
             <mat-card-content class="def-card-content">
                 <span>Cost</span>
-                <h3>10000.00</h3>
+                <h4>10000.00</h4>
             </mat-card-content>
             <mat-card-footer class="def-card-footer">
                 <i class="material-icons md-18 mt1 mr10 left">access_time</i>2018-04-03
@@ -33,7 +33,7 @@
             </mat-card-header>
             <mat-card-content class="def-card-content">
                 <span>Rejected</span>
-                <h3>10000</h3>
+                <h4>10000</h4>
             </mat-card-content>
             <mat-card-footer class="def-card-footer">
                 <i class="material-icons md-18 mt1 mr10 left">access_time</i>2018-04-03
@@ -49,7 +49,7 @@
             </mat-card-header>
             <mat-card-content class="def-card-content">
                 <span>Failed</span>
-                <h3>10000</h3>
+                <h4>10000</h4>
             </mat-card-content>
             <mat-card-footer class="def-card-footer">
                 <i class="material-icons md-18 mt1 mr10 left">access_time</i>2018-04-03
@@ -65,7 +65,7 @@
             </mat-card-header>
             <mat-card-content class="def-card-content">
                 <span>Sent</span>
-                <h3>10000</h3>
+                <h4>10000</h4>
             </mat-card-content>
             <mat-card-footer class="def-card-footer">
                 <i class="material-icons md-18 mt1 mr10 left">access_time</i>2018-04-03
@@ -75,7 +75,7 @@
 </section>
 <section class="row">
     <div class="col-md-8">
-        <mat-card class="mb30 mt15 def-card">
+        <!-- <mat-card class="mb30 mt15 def-card">
             <mat-card-header echarts [options]="options" class="header-red def-card-header def-chart"></mat-card-header>
             <mat-card-content class="def-card-content">
                 <h4 class='mt15 mb15'>前十个国家消耗</h4>
@@ -83,6 +83,18 @@
             <mat-card-footer class="def-card-footer">
                 <i class="material-icons md-18 mt1 mr10 left">show_chart</i>每个国家的消耗金额统计
             </mat-card-footer>
+        </mat-card> -->
+
+        <mat-card class="mb30 mt15 def-card">
+            <mat-card-header class="header-pink def-card-header chart-header">
+                <mat-card-title>
+                    <mat-icon class="md-3 md-light">equalizer</mat-icon>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <h4 class="mt15">前十个国家消耗</h4>
+                <div echarts [options]="options" class="demo-chart"></div>
+            </mat-card-content>
         </mat-card>
     </div>
     <div class="col-md-4">
