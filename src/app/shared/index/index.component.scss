@@ -7,6 +7,14 @@ $colorWhite: #fff;
     background-color: $colorWhite;
 }
 
+.def-notice {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: auto 0;
+    width: 100%;
+}
+
 .info {
     color: $colorWhite;
 }
@@ -84,7 +92,7 @@ $colorWhite: #fff;
 
 .def-card-content {
     margin: 0;
-    padding: 10px 4px;
+    padding: 0 4px 15px 4px;
     border-bottom: 1px solid #eee;
 }
 
@@ -100,6 +108,10 @@ $colorWhite: #fff;
 
 .def-chart {
     height: 280px;
+}
+
+.def-box {
+    height: 316px;
 }
 
 .accout {
@@ -131,4 +143,16 @@ $colorWhite: #fff;
 
 .btn-white {
     background-color: #fff;
+}
+
+.header-small {
+    width: 86px;
+    float: left;
+}
+
+.text-box {
+    font-size: 1em;
+    color: #999;
+    display: block;
+    margin-bottom: 5px;
 }

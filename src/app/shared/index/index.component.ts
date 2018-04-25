@@ -15,7 +15,7 @@ export class IndexComponent {
     ngOnInit() {
 
         this.options = {
-            color:['#eb3e78'],
+            color:['#00c1da'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {            
@@ -24,10 +24,11 @@ export class IndexComponent {
             },
             grid: {
                 left: '5%',
-                right: '14%',
+                right: '10%',
                 bottom: '6%',
-                top:'14%',
-                containLabel: true
+                top:'12%',
+                containLabel: true,
+            
             },
             xAxis: {
                 name:'Country',
