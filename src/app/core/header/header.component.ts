@@ -1,6 +1,6 @@
-import { Component, OnInit, ElementRef} from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import { ROUTES } from '../nav/nav.component';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @Component({
 	selector: 'app-header',
@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit {
     private sidebarVisible: boolean;
 
     constructor(location: Location,  private element: ElementRef) {
-      this.location = location;
-          this.sidebarVisible = false;
+        this.location = location;
+        this.sidebarVisible = false;
     }
 
     apiItems : Array <any> = [

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-finance',
@@ -8,7 +8,7 @@ import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 
 export class FinanceComponent {
-  email: string = 'hana.jiang@paasoo.com '
+	email: string = 'hana.jiang@paasoo.com '
 }
 
 

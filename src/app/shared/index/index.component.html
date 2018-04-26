@@ -79,16 +79,6 @@
 </section>
 <section class="row">
     <div class="col-md-8">
-        <!-- <mat-card class="mb30 mt15 def-card">
-            <mat-card-header echarts [options]="options" class="header-pink def-card-header def-chart mb20"></mat-card-header>
-            <mat-card-content class="def-card-content">
-                <h5 class='pt15 pb10'>前十个国家消耗</h5>
-            </mat-card-content>
-            <mat-card-footer class="def-card-footer">
-                <i class="material-icons md-18 mt1 mr10 left">show_chart</i>每个国家的消耗金额统计
-            </mat-card-footer>
-        </mat-card> -->
-
         <mat-card class="mb30 mt15 def-card">
             <mat-card-header class="header-blue def-card-header chart-header">
                 <mat-card-title>
@@ -101,28 +91,6 @@
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- <div class="col-md-4">
-        <mat-card class="mb30 mt15 def-card">
-            <mat-card-header class="header-blue def-card-header def-chart">
-                <ul class="list-unstyled">
-                    <li class="mt15">
-                        <h5>2018-04-25</h5>
-                        <p class="right-box">You may tread me in the very dirt.But still,like dust,I'll rise.</p>
-                    </li>
-                    <li class="mt15 mb15">
-                        <h5>2018-04-23</h5>
-                        <p class="right-box">With the world so set on tearing itself apart，it doesn't seem like such a bad thing to me to want to put a little bit of it back together.</p>
-                    </li>
-                </ul>
-            </mat-card-header>
-            <mat-card-content class="def-card-content">
-                <h4 class='mt15 mb15'>公告</h4>
-            </mat-card-content>
-            <mat-card-footer class="def-card-footer">
-                <i class="material-icons md-18 mt1 mr10 left">people_outline</i>相关政策改变的提醒
-            </mat-card-footer>
-        </mat-card>
-    </div> -->
     <div class="col-md-4">
         <mat-card class="mb30 mt15 def-card">
             <mat-card-header class="header-green def-card-header def-box mb20">
@@ -134,13 +102,17 @@
                     <li class="mt15 mb15">
                         <h5>API SECRET</h5>
                         <div class="right-box">
-                            <small class="material-icons">&#xE061;</small>
-                            <small class="material-icons">&#xE061;</small>
-                            <small class="material-icons">&#xE061;</small>
-                            <small class="material-icons">&#xE061;</small>
-                            <small class="material-icons">&#xE061;</small>
-                            <small class="material-icons">&#xE061;</small>
+                            <small *ngIf='hide' class="material-icons">&#xE061;</small>
+                            <small *ngIf='hide' class="material-icons">&#xE061;</small>
+                            <small *ngIf='hide' class="material-icons">&#xE061;</small>
+                            <small *ngIf='hide' class="material-icons">&#xE061;</small>
+                            <small *ngIf='hide' class="material-icons">&#xE061;</small>
+                            <small *ngIf='hide' class="material-icons">&#xE061;</small>
+                            <span *ngIf='!hide'>abcdefgh1234</span>
+                            <mat-icon class="right" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
                         </div>
+
+
                     </li>
                     <li class="mb10 text-center">
                         <button mat-raised-button>充值</button>

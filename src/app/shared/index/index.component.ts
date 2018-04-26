@@ -8,6 +8,8 @@ import { single } from './index.service';
     styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
+
+    hide: boolean = true;
     options: any;
     
     constructor() { }
