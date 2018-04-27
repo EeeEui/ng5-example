@@ -8,6 +8,8 @@ declare interface RouteInfo {
     subMenuList: Array<any>;
     _collapse: boolean;
 }
+
+// route
 export const ROUTES: RouteInfo[] = [
     {path:'/index',icon:'dashboard',name:'Dashboard',subMenuList:[],_collapse:false},
 

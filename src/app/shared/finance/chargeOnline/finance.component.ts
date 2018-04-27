@@ -8,6 +8,7 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 
 export class FinanceComponent {
+	isChoose: boolean = true;
 	email: string = 'hana.jiang@paasoo.com '
 }
 

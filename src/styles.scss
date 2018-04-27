@@ -5,6 +5,10 @@ button:focus {
     outline: 0
 }
 
+a:hover {
+    text-decoration: unset
+}
+
 * {
     font-family: Roboto, 'Source han sans', 'Open sans';
     // font-family: Verdana, "Microsoft YaHei UI", Helvetica Neue, Arial;

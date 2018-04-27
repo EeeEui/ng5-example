@@ -41,7 +41,7 @@
                             </div>
                             <div class="form-group mb30">
                                 <mat-accordion>
-                                    <mat-expansion-panel>
+                                    <mat-expansion-panel [expanded]="true" (opened)="true">
                                         <mat-expansion-panel-header>
                                             <mat-panel-title class="p-0">
                                                 Phone number list
@@ -49,10 +49,10 @@
                                         </mat-expansion-panel-header>
                                         <mat-list class="mb20">
                                             <mat-list-item>
-                                                <div class="col-md-8">
+                                                <div class="col-md-8 p-0">
                                                     <mat-checkbox color="primary">20180419221234567815</mat-checkbox>
                                                 </div>
-                                                <div class="col-md-4 text-right">
+                                                <div class="col-md-4 text-right p-0">
                                                     <button mat-icon-button color="primary">
                                                         <mat-icon aria-label="edit">mode_edit</mat-icon>
                                                     </button>
@@ -66,10 +66,10 @@
                                                 <mat-divider></mat-divider>
                                             </mat-list-item>
                                             <mat-list-item>
-                                                <div class="col-md-8">
+                                                <div class="col-md-8 p-0">
                                                     <mat-checkbox color="primary">First phone number list of China</mat-checkbox>
                                                 </div>
-                                                <div class="col-md-4 text-right">
+                                                <div class="col-md-4 text-right p-0">
                                                     <button mat-icon-button color="primary">
                                                         <mat-icon aria-label="edit">mode_edit</mat-icon>
                                                     </button>
@@ -83,10 +83,10 @@
                                                 <mat-divider></mat-divider>
                                             </mat-list-item>
                                             <mat-list-item>
-                                                <div class="col-md-8">
+                                                <div class="col-md-8 p-0">
                                                     <mat-checkbox color="primary">test</mat-checkbox>
                                                 </div>
-                                                <div class="col-md-4 text-right">
+                                                <div class="col-md-4 text-right p-0">
                                                     <button mat-icon-button color="primary">
                                                         <mat-icon aria-label="edit">mode_edit</mat-icon>
                                                     </button>
@@ -110,7 +110,7 @@
                                 </mat-form-field>
                             </div>
                             <div class="form-group mb30">
-                                <mat-checkbox color="primary">I have read <a href="javascript:void(0)">the terms of use</a></mat-checkbox>
+                                <mat-checkbox class="mr10" color="primary"></mat-checkbox>I have read <a href="javascript:void(0)">the terms of use</a>
                             </div>
                             <div class="form-group mb30">
                                 <button mat-raised-button color="primary">Send</button>

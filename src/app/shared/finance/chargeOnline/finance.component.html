@@ -19,13 +19,32 @@
                             <div class="form-group mb30">
                                 <mat-tab-group>
                                     <mat-tab label="Alipay">
-                                        <mat-form-field class="def-input">
-                                            <input matInput placeholder="Amount" type="number">
-                                            <span matPrefix>$&nbsp;</span>
-                                            <span matSuffix>.00</span>
-                                        </mat-form-field>
+                                        <div class="mt30 mb30 ml15 mr15">
+                                            <div *ngIf='isChoose' class="button-row mt30 mb30">
+                                                <button mat-raised-button>100 HKD</button>
+                                                <button mat-raised-button>200 HKD</button>
+                                                <button mat-raised-button>500 HKD</button>
+                                                <button mat-raised-button>1000 HKD</button>
+                                                <button mat-raised-button (click)='isChoose=false'>自定义金额</button>
+                                            </div>
+                                            <mat-form-field *ngIf='!isChoose' class="def-input">
+                                                <input matInput placeholder="Amount" type="number">
+                                                <span matPrefix>$&nbsp;</span>
+                                                <span matSuffix>.00</span>
+                                            </mat-form-field>
+                                            <button mat-raised-button *ngIf='!isChoose' (click)='isChoose=true'>选择金额</button>
+                                        </div>
                                     </mat-tab>
-                                    <mat-tab label="Paypal">Content 2</mat-tab>
+                                    <mat-tab label="Paypal">
+                                        <div class="mt30 mb30 ml15 mr15">
+                                            <div class="button-row mt30 mb30">
+                                                <button mat-raised-button>100 HKD</button>
+                                                <button mat-raised-button>200 HKD</button>
+                                                <button mat-raised-button>500 HKD</button>
+                                                <button mat-raised-button>1000 HKD</button>
+                                            </div>
+                                        </div>
+                                    </mat-tab>
                                 </mat-tab-group>
                             </div>
                             <div class="form-group mb30">

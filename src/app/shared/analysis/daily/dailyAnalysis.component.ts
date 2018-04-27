@@ -11,7 +11,7 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
 export class DailyAnalysisComponent {
 
     country: FormControl = new FormControl();
-	displayedColumns = ['country', 
+	  displayedColumns = ['country', 
 						'networkName', 
 						'networkCode', 
 						'send',

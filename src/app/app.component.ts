@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component} from '@angular/core';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 @Component({
@@ -6,10 +6,26 @@ import PerfectScrollbar from 'perfect-scrollbar';
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
+
 	ngOnInit() {
+		// 滚动条
 		const elemSlider = <HTMLElement>document.querySelector('.page-sidenav');
 		const ps = new PerfectScrollbar(elemSlider);
 		ps.update();
 	}
+
+	// 倒序函数
+	reverse(word: string) {
+		if (word == 'AAA'){
+			return word;
+		}else {
+			return word.split("").reverse().join("");
+		}
+	}
+
+	// 表单验证
+
+
 }
+
