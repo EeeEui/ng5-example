@@ -5,10 +5,10 @@
         <ol class="def-breadcrumb">
             <li>
                 <button mat-mini-fab class='nav-switch'>
-                    <!-- <mat-icon>more_vert</mat-icon> -->
                     <i class="material-icons md-24">more_vert</i>
                 </button>
                 <span>{{getTitle()}}</span>
+
             </li>
             <li style="margin-left: 3.8em">{{subMenuName}}</li>
         </ol>
@@ -28,15 +28,15 @@
                     <mat-icon>language</mat-icon>
                 </button>
                 <mat-menu #lang>
+                    <button mat-menu-item (click)="useLanguage('en')">
+                        <span>English</span>
+                    </button>
+                    <button mat-menu-item (click)="useLanguage('zh')">
+                        <span>中文(简)</span>
+                    </button>
                     <button mat-menu-item>
-                    <span>English</span>
-                </button>
-                    <button mat-menu-item>
-                    <span>中文(简)</span>
-                </button>
-                    <button mat-menu-item>
-                    <span>日本語</span>
-                </button>
+                        <span>日本語</span>
+                    </button>
                 </mat-menu>
 
                 <button class="mr15" mat-icon-button [matMenuTriggerFor]="account">

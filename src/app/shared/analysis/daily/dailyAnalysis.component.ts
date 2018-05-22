@@ -39,15 +39,15 @@ export class DailyAnalysisComponent {
   export interface Element {
     country: string;
     networkName: string;
-	networkCode: number, 
-	send: number;
+	  networkCode: number, 
+	  send: number;
     successful: number;
     accepted: number;
     failed: number;
     rejected: number;
-	unknown: number;
-	unreachable: number;
-	successRate: number;
+	  unknown: number;
+	  unreachable: number;
+	  successRate: number;
   }
   
   const ELEMENT_DATA: Element[] = [

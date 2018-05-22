@@ -23,9 +23,18 @@ module.exports = function(config) {
 
         coverageIstanbulReporter: {
             // 覆盖率报告方式 
-            reports: ['html', 'lcovonly'],
-            fixWebpackSourcePaths: true
+            reports: ['html', 'lcovonly', 'text-summary'],
+            fixWebpackSourcePaths: true,
+            dir: './coverage/',
+            'report-config': {
+                html: {
+                    // outputs the report in ./coverage/html
+                    subdir: 'html'
+                }
+            },
         },
+
+
 
         // 指定angular cli环境 
         angularCli: {
@@ -33,7 +42,7 @@ module.exports = function(config) {
         },
 
         // 结果报表
-        reporters: ['progress', 'kjhtml'],
+        reporters: ['progress', 'coverage-istanbul', 'kjhtml'],
 
         // 服务器端口
         port: 9876,

@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import { ROUTES } from '../nav/nav.component';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-header',
@@ -14,9 +15,15 @@ export class HeaderComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(location: Location,  private element: ElementRef) {
+    constructor(location: Location,  private element: ElementRef, private translate: TranslateService) {
+        this.translate.setDefaultLang('en');
+        this.translate.use('en');
         this.location = location;
-        this.sidebarVisible = false;
+        this.sidebarVisible = true;
+    }
+
+    useLanguage(language: string) {
+        this.translate.use(language);
     }
 
     apiItems : Array <any> = [

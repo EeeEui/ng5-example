@@ -1,5 +1,7 @@
 import { Component} from '@angular/core';
 import PerfectScrollbar from 'perfect-scrollbar';
+import { templateJitUrl } from '@angular/compiler';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-root',
@@ -7,6 +9,10 @@ import PerfectScrollbar from 'perfect-scrollbar';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+	constructor(private translate: TranslateService) {
+        translate.setDefaultLang('en');
+    }
 
 	ngOnInit() {
 		// 滚动条
@@ -24,8 +30,19 @@ export class AppComponent {
 		}
 	}
 
-	// 表单验证
+	// 切割数组
+	sliceArr(count:number,size:number) {
+		let result: Array<string> = [];
+		let page: number = Math.ceil(count/size);
 
+		for (let i=0,j=page; i<j; i++){
+			let start:number = i * size + 1;
+            let end: number = (i+1) * size;
+			let temp: string = start+"-"+end;
+			result.push(temp);
+		}
+		return result;
+	}
 
 }
 

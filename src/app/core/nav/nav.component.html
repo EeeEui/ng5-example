@@ -1,6 +1,6 @@
 <ul class="nav-style">
     <mat-toolbar class="def-toolbar mb30">
-        <img src='../assets/images/logo1.png'>
+        <img src='./assets/images/logo.png'>
     </mat-toolbar>
     <li *ngFor="let item of menuList">
         <a class="nav-list" *ngIf="!item.subMenuList.length" (click)="toggleCollapse(item)" routerLinkActive="bgActive" href="javascript:void(0);" routerLink='{{item.path}}'>
